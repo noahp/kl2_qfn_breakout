@@ -7,6 +7,9 @@ http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KL2
 
 kl24 part
 =====
+mouser
+-----
+http://www.mouser.com/ProductDetail/Freescale-Semiconductor/MKL24Z64VFM4/?qs=sGAEpiMZZMuoKKEcg8mMKCTlPPZAritFsZ2raHyVNYo%3d
 
 manual
 -----
