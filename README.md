@@ -5,6 +5,9 @@ Breakout for Freescale Kinetis MKL24Z64VFM4 in 32-QFN package.
 
 http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KL2
 
+kl24 part
+=====
+
 manual
 -----
 http://cache.freescale.com/files/32bit/doc/ref_manual/KL24P80M48SF0RM.pdf?fpsp=1&WT_TYPE=Reference%20Manuals&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=pdf&WT_ASSET=Documentation
@@ -24,3 +27,9 @@ http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MKL
 pads
 -----
 http://cache.freescale.com/files/shared/doc/package_info/98ASA00473D.pdf
+
+other parts
+=====
+usb mini b female
+-----
+http://www.mouser.com/ProductDetail/FCI/10033526-N3212LF/?qs=sGAEpiMZZMulM8LPOQ%252byk74feZXni60aBizKb4dJGTU%3d
