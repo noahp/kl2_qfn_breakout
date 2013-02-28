@@ -5,6 +5,14 @@ Breakout for Freescale Kinetis MKL24Z64VFM4 in 32-QFN package.
 
 http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KL2
 
+manual
+-----
+http://cache.freescale.com/files/32bit/doc/ref_manual/KL24P80M48SF0RM.pdf?fpsp=1&WT_TYPE=Reference%20Manuals&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=pdf&WT_ASSET=Documentation
+
+part spec
+-----
+http://www.mouser.com/ds/2/161/KL24P80M48SF0-218435.pdf
+
 symbol
 -----
 http://www.freescale.com/files/capture/pdf/mkl24z32vfm4_qfn32.pdf
