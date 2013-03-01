@@ -36,3 +36,7 @@ other parts
 usb mini b female
 -----
 http://www.mouser.com/ProductDetail/FCI/10033526-N3212LF/?qs=sGAEpiMZZMulM8LPOQ%252byk74feZXni60aBizKb4dJGTU%3d
+
+3.3/5v reg
+-----
+http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1252-33X50I-MS/?qs=sGAEpiMZZMsUzhEcHltCubsvjTIdlMwG
