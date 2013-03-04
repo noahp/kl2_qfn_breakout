@@ -33,9 +33,9 @@ http://cache.freescale.com/files/shared/doc/package_info/98ASA00473D.pdf
 
 other parts
 =====
-usb mini b female
+usb micro ab
 -----
-http://www.mouser.com/ProductDetail/FCI/10033526-N3212LF/?qs=sGAEpiMZZMulM8LPOQ%252byk74feZXni60aBizKb4dJGTU%3d
+http://www.mouser.com/ProductDetail/FCI/10104111-0001LF/?qs=%2fha2pyFadugqlHYsIycssJOmamHIEU%252boUyT1P%2flLLksRMBp7QwL8jg%3d%3d
 
 3.3/5v reg
 -----
