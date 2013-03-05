@@ -37,6 +37,10 @@ usb micro ab
 -----
 http://www.mouser.com/ProductDetail/FCI/10104111-0001LF/?qs=%2fha2pyFadugqlHYsIycssJOmamHIEU%252boUyT1P%2flLLksRMBp7QwL8jg%3d%3d
 
+3.3v lin. reg
+-----
+http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1700T-3302E-TT/?qs=sGAEpiMZZMuLLNXTG1MZamrVyxlXrz12YZP2vnOw5Jk%3d
+
 3.3/5v reg
 -----
 http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1252-33X50I-MS/?qs=sGAEpiMZZMsUzhEcHltCubsvjTIdlMwG
