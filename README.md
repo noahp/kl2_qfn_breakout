@@ -39,8 +39,13 @@ http://www.mouser.com/ProductDetail/FCI/10104111-0001LF/?qs=%2fha2pyFadugqlHYsIy
 
 3.3v lin. reg
 -----
+http://www.mouser.com/ProductDetail/Texas-Instruments/LP3985IM5-33-NOPB/?qs=sGAEpiMZZMuLLNXTG1MZarQJh%252b9fiMUlqlyti2azQE0%3d
 http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1700T-3302E-TT/?qs=sGAEpiMZZMuLLNXTG1MZamrVyxlXrz12YZP2vnOw5Jk%3d
 
 3.3/5v reg
 -----
 http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1252-33X50I-MS/?qs=sGAEpiMZZMsUzhEcHltCubsvjTIdlMwG
+
+lipo chrg
+-----
+http://www.mouser.com/Search/ProductDetail.aspx?R=MCP73831T-2ACI/OTvirtualkey57940000virtualkey579-MCP73831T-2ACIOT
