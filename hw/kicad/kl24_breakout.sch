@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 3/9/2013 9:06:54 PM
+EESchema Schematic File Version 2  date 3/12/2013 3:35:46 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "10 mar 2013"
+Date "12 mar 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,9 +60,9 @@ Wire Wire Line
 Wire Wire Line
 	1350 6950 1350 7050
 Wire Wire Line
-	1850 3000 1750 3000
+	1750 3900 1650 3900
 Wire Wire Line
-	1850 3300 1750 3300
+	1750 4200 1650 4200
 Wire Wire Line
 	3200 6850 3200 6950
 Wire Wire Line
@@ -86,17 +86,17 @@ Wire Wire Line
 Connection ~ 9400 1200
 Wire Wire Line
 	9500 1200 9300 1200
-Connection ~ 1850 3750
+Connection ~ 1750 4650
 Wire Wire Line
-	1850 3850 1850 3600
+	1750 4750 1750 4500
 Wire Wire Line
-	1850 3600 1750 3600
+	1750 4500 1650 4500
 Wire Wire Line
 	2550 6150 2550 6050
 Wire Wire Line
 	9800 850  9800 950 
 Wire Wire Line
-	1850 3750 1750 3750
+	1750 4650 1650 4650
 Wire Wire Line
 	9400 1200 9400 1100
 Wire Wire Line
@@ -113,9 +113,9 @@ Wire Wire Line
 	7400 1500 8200 1500
 Connection ~ 7500 1500
 Wire Wire Line
-	1750 3450 1850 3450
+	1650 4350 1750 4350
 Wire Wire Line
-	1750 3150 1850 3150
+	1650 4050 1750 4050
 Connection ~ 1350 6550
 Wire Wire Line
 	1250 6550 1950 6550
@@ -207,13 +207,13 @@ F 3 "" H 1350 6750 60  0001 C CNN
 $EndComp
 Text GLabel 1250 6550 0    60   Input ~ 0
 USB_VBUS
-Text GLabel 1850 3450 2    60   Input ~ 0
+Text GLabel 1750 4350 2    60   Input ~ 0
 USB_ID
-Text GLabel 1850 3300 2    60   Input ~ 0
+Text GLabel 1750 4200 2    60   Input ~ 0
 USB_DP
-Text GLabel 1850 3150 2    60   Input ~ 0
+Text GLabel 1750 4050 2    60   Input ~ 0
 USB_DM
-Text GLabel 1850 3000 2    60   Input ~ 0
+Text GLabel 1750 3900 2    60   Input ~ 0
 USB_VBUS
 $Comp
 L GND #PWR?
@@ -338,12 +338,12 @@ LV_SUPP_VIN
 $Comp
 L GND #PWR?
 U 1 1 513B6B06
-P 1850 3850
-F 0 "#PWR?" H 1850 3850 30  0001 C CNN
-F 1 "GND" H 1850 3780 30  0001 C CNN
-F 2 "" H 1850 3850 60  0001 C CNN
-F 3 "" H 1850 3850 60  0001 C CNN
-	1    1850 3850
+P 1750 4750
+F 0 "#PWR?" H 1750 4750 30  0001 C CNN
+F 1 "GND" H 1750 4680 30  0001 C CNN
+F 2 "" H 1750 4750 60  0001 C CNN
+F 3 "" H 1750 4750 60  0001 C CNN
+	1    1750 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -470,12 +470,12 @@ $EndComp
 $Comp
 L USB-micro-ab J?
 U 1 1 5135355A
-P 1450 3400
-F 0 "J?" H 1450 2800 60  0000 C CNN
-F 1 "USB-micro-ab" H 1450 4050 60  0000 C CNN
-F 2 "" H 1450 3400 60  0001 C CNN
-F 3 "" H 1450 3400 60  0001 C CNN
-	1    1450 3400
+P 1350 4300
+F 0 "J?" H 1350 3700 60  0000 C CNN
+F 1 "USB-micro-ab" H 1350 4950 60  0000 C CNN
+F 2 "" H 1350 4300 60  0001 C CNN
+F 3 "" H 1350 4300 60  0001 C CNN
+	1    1350 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -741,4 +741,14 @@ Wire Wire Line
 	5550 2300 5550 2200
 Wire Wire Line
 	5700 2200 5700 2300
+Text Notes 2050 5600 0    60   ~ 0
+LIPO CHARGER
+Text Notes 7800 750  0    60   ~ 0
+LV POWER SUPPLY 0.9V-1.7V
+Text Notes 800  3400 0    60   ~ 0
+USB OTG CONNECTOR
+Text Notes 1000 950  0    60   ~ 0
+USB HOST POWER SUPPLY
+Text Notes 3050 900  0    60   ~ 0
+3.3V POWER SUPPLY
 $EndSCHEMATC
