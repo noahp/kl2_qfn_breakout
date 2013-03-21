@@ -49,3 +49,8 @@ http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1252-33X50I-MS/?qs=s
 lipo chrg
 -----
 http://www.mouser.com/Search/ProductDetail.aspx?R=MCP73831T-2ACI/OTvirtualkey57940000virtualkey579-MCP73831T-2ACIOT
+
+xtal
+-----
+http://www.digikey.com/product-detail/en/ABLS-8.000MHZ-B4-T/535-10212-1-ND/2184247
+
