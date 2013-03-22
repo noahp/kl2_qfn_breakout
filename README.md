@@ -54,3 +54,6 @@ xtal
 -----
 http://www.digikey.com/product-detail/en/ABLS-8.000MHZ-B4-T/535-10212-1-ND/2184247
 
+inductor
+-----
+http://www.digikey.com/product-detail/en/LBC3225T4R7MR/587-2431-1-ND/2230297
