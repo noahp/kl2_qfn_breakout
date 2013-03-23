@@ -59,13 +59,13 @@ UDEFS =
 UADEFS =
  
 # List C source files here
-LIBSDIR    = ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries
+LIBSDIR    = .\STM32F0-Discovery_FW_V1.0.0\Libraries
 CORELIBDIR = $(LIBSDIR)\CMSIS\Include
 DEVDIR  = $(LIBSDIR)\CMSIS\ST\STM32F0xx
 STMSPDDIR    = $(LIBSDIR)\STM32F0xx_StdPeriph_Driver
 STMSPSRCDDIR = $(STMSPDDIR)\src
 STMSPINCDDIR = $(STMSPDDIR)\inc
-DISCOVERY    = ..\..\STM32F0-Discovery_FW_V1.0.0\Utilities\STM32F0-Discovery
+DISCOVERY    = .\STM32F0-Discovery_FW_V1.0.0\Utilities\STM32F0-Discovery
 LINKER = .\linker
 SRC  = .\src\main.c
 SRC += .\src\stm32f0xx_it.c
