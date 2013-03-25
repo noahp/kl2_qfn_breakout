@@ -57,3 +57,7 @@ http://www.digikey.com/product-detail/en/ABLS-8.000MHZ-B4-T/535-10212-1-ND/21842
 inductor
 -----
 http://www.digikey.com/product-detail/en/LBC3225T4R7MR/587-2431-1-ND/2230297
+
+temp sense microchip app note
+-----
+http://ww1.microchip.com/downloads/en/AppNotes/21895d.pdf
