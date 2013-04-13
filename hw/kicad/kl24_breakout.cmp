@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 11:41:39 AM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 12:00:44 PM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -424,7 +424,7 @@ BeginCmp
 TimeStamp = /514BA0D4;
 Reference = U2;
 ValeurCmp = M25P05-A;
-IdModule  = ;
+IdModule  = TSSOP-8;
 EndCmp
 
 BeginCmp
@@ -438,21 +438,21 @@ BeginCmp
 TimeStamp = /513B6A06;
 Reference = U4;
 ValeurCmp = MCP1640_SOT23;
-IdModule  = ;
+IdModule  = MCP1640;
 EndCmp
 
 BeginCmp
 TimeStamp = /513635E4;
 Reference = U5;
 ValeurCmp = LP3985;
-IdModule  = ;
+IdModule  = LP3985;
 EndCmp
 
 BeginCmp
 TimeStamp = /513BACD6;
 Reference = X1;
 ValeurCmp = CRYSTAL;
-IdModule  = ;
+IdModule  = ABLS-8.000MHZ-B4-T;
 EndCmp
 
 EndListe
