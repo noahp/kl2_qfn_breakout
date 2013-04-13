@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 3/26/2013 5:58:58 PM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 11:15:28 AM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -74,7 +74,7 @@ BeginCmp
 TimeStamp = /51520DFE;
 Reference = D2;
 ValeurCmp = DIODESCH;
-IdModule  = ;
+IdModule  = SM0603;
 EndCmp
 
 BeginCmp
@@ -95,7 +95,7 @@ BeginCmp
 TimeStamp = /513B6D74;
 Reference = L1;
 ValeurCmp = INDUCTOR;
-IdModule  = ;
+IdModule  = SM1210;
 EndCmp
 
 BeginCmp

@@ -61,3 +61,7 @@ http://www.digikey.com/product-detail/en/LBC3225T4R7MR/587-2431-1-ND/2230297
 temp sense microchip app note
 -----
 http://ww1.microchip.com/downloads/en/AppNotes/21895d.pdf
+
+schottky
+-----
+http://www.mouser.com/ProductDetail/Bourns/CD0603-B0130L/?qs=sGAEpiMZZMtQ8nqTKtFS%2fAXFgjeuToUU4fmjd35%2f6xk%3d
