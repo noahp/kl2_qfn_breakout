@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 4/13/2013 11:10:23 AM
+EESchema Schematic File Version 2  date 4/13/2013 11:20:48 AM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "12 apr 2013"
+Date "13 apr 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -869,7 +869,7 @@ Text Notes 1800 4850 0    60   ~ 0
 LIPO CHARGER
 Text Notes 7800 900  0    60   ~ 0
 LV POWER SUPPLY 0.9V-1.7V
-Text Notes 1100 1550 0    60   ~ 0
+Text Notes 1000 1700 0    60   ~ 0
 USB OTG CONNECTOR
 Text Notes 8700 6850 0    60   ~ 0
 3.3V POWER SUPPLY
@@ -1470,4 +1470,45 @@ F 3 "~" H 8800 2900 30  0000 C CNN
 	1    8800 2900
 	0    -1   -1   0   
 $EndComp
+$Comp
+L TST P37
+U 1 1 516977C3
+P 2600 1050
+F 0 "P37" H 2600 1350 40  0000 C CNN
+F 1 "USB_V" H 2600 1300 30  0000 C CNN
+F 2 "" H 2600 1050 60  0001 C CNN
+F 3 "" H 2600 1050 60  0001 C CNN
+	1    2600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P38
+U 1 1 516977C9
+P 2850 1050
+F 0 "P38" H 2850 1350 40  0000 C CNN
+F 1 "USB_GND" H 2850 1300 30  0000 C CNN
+F 2 "" H 2850 1050 60  0001 C CNN
+F 3 "" H 2850 1050 60  0001 C CNN
+	1    2850 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 2600 1150 0    60   Input ~ 0
+USB_VBUS
+Wire Wire Line
+	2600 1150 2600 1050
+$Comp
+L GND #PWR020
+U 1 1 5169787E
+P 2850 1150
+F 0 "#PWR020" H 2850 1150 30  0001 C CNN
+F 1 "GND" H 2850 1080 30  0001 C CNN
+F 2 "" H 2850 1150 60  0001 C CNN
+F 3 "" H 2850 1150 60  0001 C CNN
+	1    2850 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1150 2850 1050
+Text Notes 2100 1350 0    60   ~ 0
+USB VPWR TST POINTS
 $EndSCHEMATC

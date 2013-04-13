@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 11:15:28 AM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 11:21:17 AM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -347,6 +347,20 @@ BeginCmp
 TimeStamp = /513B6A31;
 Reference = P36;
 ValeurCmp = BATT_BACKUP-;
+IdModule  = TEST_0.100;
+EndCmp
+
+BeginCmp
+TimeStamp = /516977C3;
+Reference = P37;
+ValeurCmp = USB_V;
+IdModule  = TEST_0.100;
+EndCmp
+
+BeginCmp
+TimeStamp = /516977C9;
+Reference = P38;
+ValeurCmp = USB_GND;
 IdModule  = TEST_0.100;
 EndCmp
 
