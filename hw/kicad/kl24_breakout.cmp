@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/13/2013 4:13:06 PM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 4/14/2013 10:41:11 AM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -88,7 +88,7 @@ BeginCmp
 TimeStamp = /51353F09;
 Reference = J2;
 ValeurCmp = ARM_10PIN;
-IdModule  = ARM_10PIN;
+IdModule  = ARM_10_PIN;
 EndCmp
 
 BeginCmp
