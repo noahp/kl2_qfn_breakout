@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 4/13/2013 11:20:48 AM
+EESchema Schematic File Version 2  date 4/14/2013 10:10:40 AM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,7 +30,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:kicadlib
-LIBS:kl24_breakout-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
