@@ -65,3 +65,7 @@ http://ww1.microchip.com/downloads/en/AppNotes/21895d.pdf
 schottky
 -----
 http://www.mouser.com/ProductDetail/Bourns/CD0603-B0130L/?qs=sGAEpiMZZMtQ8nqTKtFS%2fAXFgjeuToUU4fmjd35%2f6xk%3d
+
+10 pin header
+-----
+http://www.mouser.com/ProductDetail/FCI/20021121-00010T4LF/?qs=sGAEpiMZZMvffgRu4KC1R10eT3mhH9PKH6si4hSOVY4%3d
