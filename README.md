@@ -11,6 +11,10 @@ mouser
 -----
 http://www.mouser.com/ProductDetail/Freescale-Semiconductor/MKL24Z64VFM4/?qs=sGAEpiMZZMuoKKEcg8mMKCTlPPZAritFsZ2raHyVNYo%3d
 
+digkey
+-----
+http://www.digikey.com/product-search/en?x=-1066&y=-70&lang=en&site=us&KeyWords=MKL24Z64VFM4
+
 manual
 -----
 http://cache.freescale.com/files/32bit/doc/ref_manual/KL24P80M48SF0RM.pdf?fpsp=1&WT_TYPE=Reference%20Manuals&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=pdf&WT_ASSET=Documentation
