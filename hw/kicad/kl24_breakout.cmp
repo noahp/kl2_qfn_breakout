@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 5/19/2013 11:26:54 AM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 5/22/2013 3:43:07 PM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -389,7 +389,7 @@ BeginCmp
 TimeStamp = /513BACD6;
 Reference = X1;
 ValeurCmp = CRYSTAL;
-IdModule  = ABLS-8.000MHZ-B4-T;
+IdModule  = XTAL_7A-8-000MAAE-T;
 EndCmp
 
 EndListe

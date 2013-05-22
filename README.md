@@ -56,6 +56,8 @@ http://www.mouser.com/Search/ProductDetail.aspx?R=MCP73831T-2ACI/OTvirtualkey579
 
 xtal
 -----
+http://www.digikey.com/product-detail/en/7A-8.000MAAE-T/887-1740-1-ND/3518790  
+old:  
 http://www.digikey.com/product-detail/en/ABLS-8.000MHZ-B4-T/535-10212-1-ND/2184247
 
 inductor
