@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 5/19/2013 11:25:39 AM
+EESchema Schematic File Version 2  date 5/24/2013 8:28:12 AM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "19 may 2013"
+Date "24 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1308,4 +1308,60 @@ Wire Wire Line
 	2850 1150 2850 1050
 Text Notes 2100 1350 0    60   ~ 0
 USB VPWR TST POINTS
+Text GLabel 7650 3300 0    60   Input ~ 0
+20
+$Comp
+L JUMPER JP1
+U 1 1 519F5D90
+P 8000 3300
+F 0 "JP1" H 8000 3450 60  0000 C CNN
+F 1 "JUMPER" H 8000 3220 40  0000 C CNN
+F 2 "~" H 8000 3300 60  0000 C CNN
+F 3 "~" H 8000 3300 60  0000 C CNN
+	1    8000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D3
+U 1 1 519F5D9F
+P 8350 3550
+F 0 "D3" H 8350 3650 50  0000 C CNN
+F 1 "LED" H 8350 3450 50  0000 C CNN
+F 2 "~" H 8350 3550 60  0000 C CNN
+F 3 "~" H 8350 3550 60  0000 C CNN
+	1    8350 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 519F5DAE
+P 8350 4050
+F 0 "R5" V 8430 4050 40  0000 C CNN
+F 1 "330" V 8357 4051 40  0000 C CNN
+F 2 "~" V 8280 4050 30  0000 C CNN
+F 3 "~" H 8350 4050 30  0000 C CNN
+	1    8350 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 519F5DBB
+P 8350 4350
+F 0 "#PWR016" H 8350 4350 30  0001 C CNN
+F 1 "GND" H 8350 4280 30  0001 C CNN
+F 2 "" H 8350 4350 60  0001 C CNN
+F 3 "" H 8350 4350 60  0001 C CNN
+	1    8350 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4350 8350 4300
+Wire Wire Line
+	8350 3800 8350 3750
+Wire Wire Line
+	7650 3300 7700 3300
+Wire Wire Line
+	8300 3300 8350 3300
+Wire Wire Line
+	8350 3300 8350 3350
 $EndSCHEMATC
