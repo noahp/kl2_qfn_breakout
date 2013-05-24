@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 5/22/2013 3:43:07 PM
+Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 5/24/2013 8:59:07 AM
 
 BeginCmp
 TimeStamp = /513B7102;
@@ -64,6 +64,13 @@ IdModule  = SM0603;
 EndCmp
 
 BeginCmp
+TimeStamp = /519F5D9F;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /5135355A;
 Reference = J1;
 ValeurCmp = USB-micro-ab;
@@ -75,6 +82,13 @@ TimeStamp = /51353F09;
 Reference = J2;
 ValeurCmp = ARM_10PIN;
 IdModule  = ARM_10_PIN_SMT;
+EndCmp
+
+BeginCmp
+TimeStamp = /519F5D90;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = jmp_small;
 EndCmp
 
 BeginCmp
@@ -355,6 +369,13 @@ TimeStamp = /513BAF17;
 Reference = R4;
 ValeurCmp = 33R;
 IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /519F5DAE;
+Reference = R5;
+ValeurCmp = 330;
+IdModule  = SM0603;
 EndCmp
 
 BeginCmp
