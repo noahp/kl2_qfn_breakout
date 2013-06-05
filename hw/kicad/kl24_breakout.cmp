@@ -1,18 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-04 BZR 3984)-stable date = 5/24/2013 8:59:07 AM
-
-BeginCmp
-TimeStamp = /513B7102;
-Reference = C1;
-ValeurCmp = 4.7uF;
-IdModule  = SM0603_Capa;
-EndCmp
-
-BeginCmp
-TimeStamp = /513B71C3;
-Reference = C2;
-ValeurCmp = 4.7uF;
-IdModule  = SM0603_Capa;
-EndCmp
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 6/5/2013 6:58:30 PM
 
 BeginCmp
 TimeStamp = /5152248A;
@@ -50,20 +36,6 @@ IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
-TimeStamp = /513B711D;
-Reference = D1;
-ValeurCmp = LED;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /51520DFE;
-Reference = D2;
-ValeurCmp = DIODESCH;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
 TimeStamp = /519F5D9F;
 Reference = D3;
 ValeurCmp = LED;
@@ -89,20 +61,6 @@ TimeStamp = /519F5D90;
 Reference = JP1;
 ValeurCmp = JUMPER;
 IdModule  = jmp_small;
-EndCmp
-
-BeginCmp
-TimeStamp = /5135356A;
-Reference = P1;
-ValeurCmp = BATT+;
-IdModule  = TEST_0.100;
-EndCmp
-
-BeginCmp
-TimeStamp = /5135356E;
-Reference = P2;
-ValeurCmp = BATT-;
-IdModule  = TEST_0.100;
 EndCmp
 
 BeginCmp
@@ -344,20 +302,6 @@ IdModule  = TEST_0.100;
 EndCmp
 
 BeginCmp
-TimeStamp = /513B7149;
-Reference = R1;
-ValeurCmp = 470R;
-IdModule  = SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /513B7181;
-Reference = R2;
-ValeurCmp = 2K;
-IdModule  = SM0603_Resistor;
-EndCmp
-
-BeginCmp
 TimeStamp = /513BB078;
 Reference = R3;
 ValeurCmp = 33R;
@@ -376,13 +320,6 @@ TimeStamp = /519F5DAE;
 Reference = R5;
 ValeurCmp = 330;
 IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /513636F3;
-Reference = U1;
-ValeurCmp = MCP73831;
-IdModule  = MCP73831;
 EndCmp
 
 BeginCmp
