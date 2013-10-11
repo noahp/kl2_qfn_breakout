@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/5/2013 3:10:17 PM
+EESchema Schematic File Version 2  date 10/11/2013 6:25:26 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 oct 2013"
+Date "11 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,8 +45,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	7650 1050 7800 1050
 Wire Wire Line
 	2000 6000 2000 6300
 Wire Wire Line
@@ -148,21 +146,6 @@ Wire Wire Line
 	2050 6150 2100 6150
 Wire Wire Line
 	2000 6300 2100 6300
-Connection ~ 7700 1650
-Wire Wire Line
-	7800 1350 7700 1350
-Wire Wire Line
-	7700 1350 7700 2250
-Wire Wire Line
-	7800 1650 7700 1650
-Wire Wire Line
-	7700 2250 7800 2250
-Wire Wire Line
-	7650 2400 7750 2400
-Wire Wire Line
-	7750 1200 7650 1200
-Wire Wire Line
-	7650 1500 7750 1500
 Wire Wire Line
 	6350 2750 6350 2850
 Wire Wire Line
@@ -268,9 +251,9 @@ Wire Wire Line
 	1950 3350 1850 3350
 Wire Wire Line
 	1950 3050 1850 3050
-Text GLabel 7650 1050 0    60   Input ~ 0
+Text GLabel 5400 1550 3    60   Input ~ 0
 3.3V_SUPPLY
-Text GLabel 2200 3500 2    60   Input ~ 0
+Text GLabel 2800 3900 2    60   Input ~ 0
 USB_ID
 Text GLabel 1950 3350 2    60   Input ~ 0
 USB_DP
@@ -299,17 +282,6 @@ F 2 "" H 2700 6150 60  0001 C CNN
 F 3 "" H 2700 6150 60  0001 C CNN
 	1    2700 6150
 	1    0    0    -1  
-$EndComp
-$Comp
-L ARM_10PIN J2
-U 1 1 51353F09
-P 8250 1550
-F 0 "J2" H 8250 550 60  0000 C CNN
-F 1 "ARM_10PIN" H 8250 2200 60  0000 C CNN
-F 2 "" H 8250 1550 60  0001 C CNN
-F 3 "" H 8250 1550 60  0001 C CNN
-	1    8250 1550
-	-1   0    0    -1  
 $EndComp
 $Comp
 L USB-micro-ab J1
@@ -482,21 +454,21 @@ Text Notes 900  2700 0    60   ~ 0
 USB OTG CONNECTOR
 Text Notes 2250 6650 0    60   ~ 0
 3.3V POWER SUPPLY
-Text GLabel 7650 1500 0    60   Input ~ 0
+Text GLabel 5900 1550 3    60   Input ~ 0
 10
-Text GLabel 7650 1200 0    60   Input ~ 0
+Text GLabel 5650 1550 3    60   Input ~ 0
 13
-Text GLabel 7650 2400 0    60   Input ~ 0
+Text GLabel 6150 1550 3    60   Input ~ 0
 19
 $Comp
 L GND #PWR04
 U 1 1 513F9714
-P 7700 2250
-F 0 "#PWR04" H 7700 2250 30  0001 C CNN
-F 1 "GND" H 7700 2180 30  0001 C CNN
-F 2 "" H 7700 2250 60  0001 C CNN
-F 3 "" H 7700 2250 60  0001 C CNN
-	1    7700 2250
+P 6400 1550
+F 0 "#PWR04" H 6400 1550 30  0001 C CNN
+F 1 "GND" H 6400 1480 30  0001 C CNN
+F 2 "" H 6400 1550 60  0001 C CNN
+F 3 "" H 6400 1550 60  0001 C CNN
+	1    6400 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -569,9 +541,6 @@ F 3 "" H 4500 3450 60  0001 C CNN
 	1    4500 3450
 	-1   0    0    1   
 $EndComp
-NoConn ~ 7750 1800
-NoConn ~ 7800 1950
-NoConn ~ 7750 2100
 NoConn ~ 3350 6300
 $Comp
 L TST P3
@@ -991,8 +960,6 @@ Text GLabel 10750 4000 0    60   Input ~ 0
 32
 Text Notes 800  4200 0    60   ~ 0
 id pin- gnd for host, float for device
-NoConn ~ 1850 3500
-NoConn ~ 2200 3500
 $Comp
 L TST P1
 U 1 1 516977C3
@@ -1099,4 +1066,93 @@ Wire Wire Line
 	1700 5850 1850 5850
 Wire Wire Line
 	1850 5850 1850 6000
+Text GLabel 2800 4100 2    60   Input ~ 0
+20
+Wire Wire Line
+	2800 3900 2800 4100
+$Comp
+L JUMPER JP?
+U 1 1 52587B78
+P 2450 3600
+F 0 "JP?" H 2450 3750 60  0000 C CNN
+F 1 "JUMPER" H 2450 3520 40  0000 C CNN
+F 2 "~" H 2450 3600 60  0000 C CNN
+F 3 "~" H 2450 3600 60  0000 C CNN
+	1    2450 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3500 2150 3500
+Wire Wire Line
+	2150 3500 2150 3600
+Wire Wire Line
+	2750 3600 2750 4000
+Wire Wire Line
+	2750 4000 2800 4000
+Connection ~ 2800 4000
+$Comp
+L TST P?
+U 1 1 52587D3C
+P 5650 1400
+F 0 "P?" H 5650 1700 40  0000 C CNN
+F 1 "SWDIO" H 5650 1650 30  0000 C CNN
+F 2 "" H 5650 1400 60  0001 C CNN
+F 3 "" H 5650 1400 60  0001 C CNN
+	1    5650 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P?
+U 1 1 52587D47
+P 5400 1400
+F 0 "P?" H 5400 1700 40  0000 C CNN
+F 1 "SWD_VCC" H 5400 1650 30  0000 C CNN
+F 2 "" H 5400 1400 60  0001 C CNN
+F 3 "" H 5400 1400 60  0001 C CNN
+	1    5400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P?
+U 1 1 52587D52
+P 5900 1400
+F 0 "P?" H 5900 1700 40  0000 C CNN
+F 1 "SWCLK" H 5900 1650 30  0000 C CNN
+F 2 "" H 5900 1400 60  0001 C CNN
+F 3 "" H 5900 1400 60  0001 C CNN
+	1    5900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P?
+U 1 1 52587D67
+P 6400 1400
+F 0 "P?" H 6400 1700 40  0000 C CNN
+F 1 "SWD_GND" H 6400 1650 30  0000 C CNN
+F 2 "" H 6400 1400 60  0001 C CNN
+F 3 "" H 6400 1400 60  0001 C CNN
+	1    6400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P?
+U 1 1 52587D72
+P 6150 1400
+F 0 "P?" H 6150 1700 40  0000 C CNN
+F 1 "NRESET" H 6150 1650 30  0000 C CNN
+F 2 "" H 6150 1400 60  0001 C CNN
+F 3 "" H 6150 1400 60  0001 C CNN
+	1    6150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1400 5400 1550
+Wire Wire Line
+	5650 1550 5650 1400
+Wire Wire Line
+	5900 1400 5900 1550
+Wire Wire Line
+	6150 1550 6150 1400
+Wire Wire Line
+	6400 1400 6400 1550
 $EndSCHEMATC
