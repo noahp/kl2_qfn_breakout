@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-jul-14)-product date = Sat 12 Oct 2013 09:14:13 AM EDT
+Cmp-Mod V01 Created by CvPcb (2013-jul-14)-product date = Sat 12 Oct 2013 03:45:09 PM EDT
 
 BeginCmp
 TimeStamp = /513BAD01;
@@ -291,35 +291,35 @@ BeginCmp
 TimeStamp = /52587D47;
 Reference = P35;
 ValeurCmp = SWD_VCC;
-IdModule  = TEST_0.100;
+IdModule  = smd_simple_pad;
 EndCmp
 
 BeginCmp
 TimeStamp = /52587D3C;
 Reference = P36;
 ValeurCmp = SWDIO;
-IdModule  = TEST_0.100;
+IdModule  = smd_simple_pad;
 EndCmp
 
 BeginCmp
 TimeStamp = /52587D52;
 Reference = P37;
 ValeurCmp = SWCLK;
-IdModule  = TEST_0.100;
+IdModule  = smd_simple_pad;
 EndCmp
 
 BeginCmp
 TimeStamp = /52587D72;
 Reference = P38;
 ValeurCmp = NRESET;
-IdModule  = TEST_0.100;
+IdModule  = smd_simple_pad;
 EndCmp
 
 BeginCmp
 TimeStamp = /52587D67;
 Reference = P39;
 ValeurCmp = SWD_GND;
-IdModule  = TEST_0.100;
+IdModule  = smd_simple_pad;
 EndCmp
 
 BeginCmp
