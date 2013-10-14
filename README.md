@@ -3,7 +3,9 @@ kl2_qfn_breakout
 
 Breakout for Freescale Kinetis MKL24Z64VFM4 in 32-QFN package.
 
-http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KL2
+http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KL2  
+![front](https://raw.github.com/noahp/kl2_qfn_breakout/master/hw/front_render.png)  
+![back](https://raw.github.com/noahp/kl2_qfn_breakout/master/hw/back_render.png)
 
 kl24 part
 =====
