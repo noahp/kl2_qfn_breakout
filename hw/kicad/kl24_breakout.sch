@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 10/14/2013 1:18:17 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "13 oct 2013"
+Date "14 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,8 +45,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	8400 850  8400 1150
 Wire Wire Line
 	1300 5800 1400 5800
 Wire Wire Line
@@ -130,22 +128,6 @@ Wire Wire Line
 Connection ~ 4000 3450
 Wire Wire Line
 	4000 3450 4000 3550
-Connection ~ 10000 850 
-Wire Wire Line
-	10000 1250 10000 1350
-Wire Wire Line
-	9750 850  10100 850 
-Connection ~ 8250 1350
-Wire Wire Line
-	8250 1250 8250 1400
-Wire Wire Line
-	8250 1350 8450 1350
-Wire Wire Line
-	8450 1350 8450 1000
-Wire Wire Line
-	8450 1000 8500 1000
-Wire Wire Line
-	8400 1150 8500 1150
 Wire Wire Line
 	5850 1600 5850 1700
 Wire Wire Line
@@ -197,41 +179,9 @@ Wire Wire Line
 Wire Wire Line
 	3850 3450 4100 3450
 Wire Wire Line
-	3650 3300 4100 3300
-Wire Wire Line
-	3850 3150 4100 3150
-Wire Wire Line
-	3850 3000 4100 3000
-Connection ~ 4050 2850
-Wire Wire Line
-	4050 2850 4050 2950
-Wire Wire Line
-	4050 2950 3600 2950
-Wire Wire Line
-	3600 2950 3600 3000
-Wire Wire Line
-	3600 3000 3550 3000
-Connection ~ 4050 2700
-Wire Wire Line
-	4050 2700 4050 2600
-Wire Wire Line
-	4050 2600 3600 2600
-Wire Wire Line
-	3600 2600 3600 2550
-Wire Wire Line
-	3600 2550 3550 2550
-Wire Wire Line
 	3850 2550 4100 2550
 Wire Wire Line
 	3850 2400 4100 2400
-Wire Wire Line
-	3500 2700 3400 2700
-Wire Wire Line
-	4000 2700 4100 2700
-Wire Wire Line
-	4000 2850 4100 2850
-Wire Wire Line
-	3400 2850 3500 2850
 Wire Wire Line
 	7800 3450 7700 3450
 Wire Wire Line
@@ -270,17 +220,6 @@ F 1 "GND" H 5050 6530 30  0001 C CNN
 F 2 "" H 5050 6600 60  0001 C CNN
 F 3 "" H 5050 6600 60  0001 C CNN
 	1    5050 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L LP3985 U2
-U 1 1 513635E4
-P 9100 1000
-F 0 "U2" H 9100 700 60  0000 C CNN
-F 1 "LP3985" H 9150 1300 60  0000 C CNN
-F 2 "" H 9100 1000 60  0001 C CNN
-F 3 "" H 9100 1000 60  0001 C CNN
-	1    9100 1000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -360,7 +299,7 @@ F 3 "" H 7800 3950 60  0001 C CNN
 	1    7800 3950
 	1    0    0    -1  
 $EndComp
-Text GLabel 3400 2850 0    60   Input ~ 0
+Text GLabel 2950 2850 0    60   Input ~ 0
 USB_DM
 $Comp
 L R R2
@@ -373,7 +312,7 @@ F 3 "" H 3750 2850 60  0001 C CNN
 	1    3750 2850
 	0    -1   -1   0   
 $EndComp
-Text GLabel 3400 2700 0    60   Input ~ 0
+Text GLabel 2950 2700 0    60   Input ~ 0
 USB_DP
 $Comp
 L R R1
@@ -390,9 +329,9 @@ Text GLabel 3850 2400 0    60   Input ~ 0
 1
 Text GLabel 3850 2550 0    60   Input ~ 0
 2
-Text GLabel 3550 2550 0    60   Input ~ 0
+Text GLabel 3300 2600 0    60   Input ~ 0
 3
-Text GLabel 3550 3000 0    60   Input ~ 0
+Text GLabel 3300 2750 0    60   Input ~ 0
 4
 Text GLabel 3850 3000 0    60   Input ~ 0
 5
@@ -452,8 +391,6 @@ Text GLabel 4800 1600 1    60   Input ~ 0
 32
 Text Notes 4000 5400 0    60   ~ 0
 USB OTG CONNECTOR
-Text Notes 8650 1500 0    60   ~ 0
-3.3V POWER SUPPLY
 Text GLabel 10100 5750 3    60   Input ~ 0
 10
 Text GLabel 9850 5750 3    60   Input ~ 0
@@ -471,59 +408,13 @@ F 3 "" H 10600 5750 60  0001 C CNN
 	1    10600 5750
 	1    0    0    -1  
 $EndComp
-$Comp
-L C C3
-U 1 1 513F995C
-P 8250 1050
-F 0 "C3" H 8150 1150 50  0000 L CNN
-F 1 "1uF" H 8100 950 50  0000 L CNN
-F 2 "" H 8250 1050 60  0001 C CNN
-F 3 "" H 8250 1050 60  0001 C CNN
-	1    8250 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C4
-U 1 1 513F9967
-P 10000 1050
-F 0 "C4" H 9900 1150 50  0000 L CNN
-F 1 "1uF" H 9850 950 50  0000 L CNN
-F 2 "" H 10000 1050 60  0001 C CNN
-F 3 "" H 10000 1050 60  0001 C CNN
-	1    10000 1050
-	1    0    0    -1  
-$EndComp
+Text GLabel 3150 3300 0    60   Input ~ 0
+3.3V_SUPPLY
 $Comp
 L GND #PWR05
-U 1 1 513F9B6C
-P 8250 1400
-F 0 "#PWR05" H 8250 1400 30  0001 C CNN
-F 1 "GND" H 8250 1330 30  0001 C CNN
-F 2 "" H 8250 1400 60  0001 C CNN
-F 3 "" H 8250 1400 60  0001 C CNN
-	1    8250 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR06
-U 1 1 513F9C7F
-P 10000 1350
-F 0 "#PWR06" H 10000 1350 30  0001 C CNN
-F 1 "GND" H 10000 1280 30  0001 C CNN
-F 2 "" H 10000 1350 60  0001 C CNN
-F 3 "" H 10000 1350 60  0001 C CNN
-	1    10000 1350
-	1    0    0    -1  
-$EndComp
-Text GLabel 10100 850  2    60   Input ~ 0
-3.3V_SUPPLY
-Text GLabel 3650 3300 0    60   Input ~ 0
-3.3V_SUPPLY
-$Comp
-L GND #PWR07
 U 1 1 513FA04E
 P 4000 3550
-F 0 "#PWR07" H 4000 3550 30  0001 C CNN
+F 0 "#PWR05" H 4000 3550 30  0001 C CNN
 F 1 "GND" H 4000 3480 30  0001 C CNN
 F 2 "" H 4000 3550 60  0001 C CNN
 F 3 "" H 4000 3550 60  0001 C CNN
@@ -531,17 +422,16 @@ F 3 "" H 4000 3550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L GND #PWR06
 U 1 1 513FA1BA
 P 4000 2300
-F 0 "#PWR08" H 4000 2300 30  0001 C CNN
+F 0 "#PWR06" H 4000 2300 30  0001 C CNN
 F 1 "GND" H 4000 2230 30  0001 C CNN
 F 2 "" H 4000 2300 60  0001 C CNN
 F 3 "" H 4000 2300 60  0001 C CNN
 	1    4000 2300
 	-1   0    0    1   
 $EndComp
-NoConn ~ 9750 1150
 $Comp
 L TST P1
 U 1 1 5149BB72
@@ -987,10 +877,10 @@ USB_VBUS
 Wire Wire Line
 	7250 5350 7250 5250
 $Comp
-L GND #PWR09
+L GND #PWR07
 U 1 1 5169787E
 P 7500 5350
-F 0 "#PWR09" H 7500 5350 30  0001 C CNN
+F 0 "#PWR07" H 7500 5350 30  0001 C CNN
 F 1 "GND" H 7500 5280 30  0001 C CNN
 F 2 "" H 7500 5350 60  0001 C CNN
 F 3 "" H 7500 5350 60  0001 C CNN
@@ -1037,10 +927,10 @@ F 3 "~" H 7850 2900 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L GND #PWR08
 U 1 1 519F5DBB
 P 7850 3200
-F 0 "#PWR010" H 7850 3200 30  0001 C CNN
+F 0 "#PWR08" H 7850 3200 30  0001 C CNN
 F 1 "GND" H 7850 3130 30  0001 C CNN
 F 2 "" H 7850 3200 60  0001 C CNN
 F 3 "" H 7850 3200 60  0001 C CNN
@@ -1057,15 +947,6 @@ Wire Wire Line
 	7800 2150 7850 2150
 Wire Wire Line
 	7850 2150 7850 2200
-Text GLabel 8100 700  0    60   Input ~ 0
-USB_VBUS
-Wire Wire Line
-	8250 850  8500 850 
-Connection ~ 8400 850 
-Wire Wire Line
-	8100 700  8250 700 
-Wire Wire Line
-	8250 700  8250 850 
 Text GLabel 5900 6800 2    60   Input ~ 0
 20
 Wire Wire Line
@@ -1168,10 +1049,10 @@ Wire Notes Line
 Text Notes 5700 6150 0    60   ~ 0
 no pop
 $Comp
-L GND #PWR011
+L GND #PWR09
 U 1 1 525B1F5C
 P 6000 4200
-F 0 "#PWR011" H 6000 4200 30  0001 C CNN
+F 0 "#PWR09" H 6000 4200 30  0001 C CNN
 F 1 "GND" H 6000 4130 30  0001 C CNN
 F 2 "" H 6000 4200 60  0001 C CNN
 F 3 "" H 6000 4200 60  0001 C CNN
@@ -1186,4 +1067,59 @@ Text GLabel 5700 4550 0    60   Input ~ 0
 Wire Wire Line
 	5700 4200 5700 4550
 Connection ~ 5700 4200
+Text GLabel 3150 3150 0    60   Input ~ 0
+USB_VBUS
+Text GLabel 3150 3000 0    60   Input ~ 0
+3.3V_SUPPLY
+Wire Wire Line
+	4100 2850 4000 2850
+Wire Wire Line
+	4050 2850 4050 2750
+Wire Wire Line
+	4050 2750 3300 2750
+Connection ~ 4050 2850
+Wire Wire Line
+	3500 2850 2950 2850
+Wire Wire Line
+	2950 2700 3500 2700
+Wire Wire Line
+	4100 2700 4000 2700
+Wire Wire Line
+	4050 2700 4050 2600
+Wire Wire Line
+	4050 2600 3300 2600
+Connection ~ 4050 2700
+Wire Wire Line
+	3850 3000 4100 3000
+Wire Wire Line
+	3150 3000 3600 3000
+Wire Wire Line
+	3600 3000 3600 2950
+Wire Wire Line
+	3600 2950 4000 2950
+Wire Wire Line
+	4000 2950 4000 3000
+Connection ~ 4000 3000
+Wire Wire Line
+	4100 3150 3850 3150
+Wire Wire Line
+	3850 3300 4100 3300
+Wire Wire Line
+	4000 3150 4000 3100
+Wire Wire Line
+	4000 3100 3600 3100
+Wire Wire Line
+	3600 3100 3600 3150
+Wire Wire Line
+	3600 3150 3150 3150
+Connection ~ 4000 3150
+Wire Wire Line
+	3150 3300 3600 3300
+Wire Wire Line
+	3600 3300 3600 3250
+Wire Wire Line
+	3600 3250 4000 3250
+Wire Wire Line
+	4000 3250 4000 3300
+Connection ~ 4000 3300
 $EndSCHEMATC
