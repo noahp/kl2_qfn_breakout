@@ -1194,7 +1194,7 @@
     )
   )
 
-  (gr_text "MKL24Z64VFM4\nBreakout\nv0.1\ngit.io/7Xh66w\noct-2013" (at 119.253 67.818) (layer F.SilkS)
+  (gr_text "MKL24Z64VFM4\nBreakout\nv0.1\ngit.io/7Xh66w\noct-2013" (at 117.983 67.818) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
   (dimension 20.701 (width 0.25) (layer Cmts.User)
