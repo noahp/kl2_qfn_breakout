@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/14/2013 1:18:17 PM
+EESchema Schematic File Version 2  date 10/15/2013 1:08:35 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "14 oct 2013"
+Date "15 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -203,7 +203,7 @@ Wire Wire Line
 	5050 5750 4950 5750
 Text GLabel 9600 5750 3    60   Input ~ 0
 3.3V_SUPPLY
-Text GLabel 6100 6000 2    60   Input ~ 0
+Text GLabel 5900 6600 2    60   Input ~ 0
 USB_ID
 Text GLabel 5050 6050 2    60   Input ~ 0
 USB_DP
@@ -400,12 +400,12 @@ Text GLabel 10350 5750 3    60   Input ~ 0
 $Comp
 L GND #PWR04
 U 1 1 513F9714
-P 10600 5750
-F 0 "#PWR04" H 10600 5750 30  0001 C CNN
-F 1 "GND" H 10600 5680 30  0001 C CNN
-F 2 "" H 10600 5750 60  0001 C CNN
-F 3 "" H 10600 5750 60  0001 C CNN
-	1    10600 5750
+P 10600 6650
+F 0 "#PWR04" H 10600 6650 30  0001 C CNN
+F 1 "GND" H 10600 6580 30  0001 C CNN
+F 2 "" H 10600 6650 60  0001 C CNN
+F 3 "" H 10600 6650 60  0001 C CNN
+	1    10600 6650
 	1    0    0    -1  
 $EndComp
 Text GLabel 3150 3300 0    60   Input ~ 0
@@ -849,7 +849,7 @@ $EndComp
 Text GLabel 1300 5800 0    60   Input ~ 0
 32
 Text Notes 3900 6900 0    60   ~ 0
-id pin- gnd for host, float for device
+id pin- gnd for host, float for device.\noptionally connect through resistor\nto io pin for control
 $Comp
 L TST P33
 U 1 1 516977C3
@@ -891,62 +891,62 @@ Wire Wire Line
 	7500 5350 7500 5250
 Text Notes 6750 5550 0    60   ~ 0
 USB VPWR TST POINTS
-Text GLabel 7150 2150 0    60   Input ~ 0
+Text GLabel 8150 1650 0    60   Input ~ 0
 20
 $Comp
 L JUMPER JP1
 U 1 1 519F5D90
-P 7500 2150
-F 0 "JP1" H 7500 2300 60  0000 C CNN
-F 1 "JUMPER" H 7500 2070 40  0000 C CNN
-F 2 "~" H 7500 2150 60  0000 C CNN
-F 3 "~" H 7500 2150 60  0000 C CNN
-	1    7500 2150
+P 8500 1650
+F 0 "JP1" H 8500 1800 60  0000 C CNN
+F 1 "JUMPER" H 8500 1570 40  0000 C CNN
+F 2 "~" H 8500 1650 60  0000 C CNN
+F 3 "~" H 8500 1650 60  0000 C CNN
+	1    8500 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D1
 U 1 1 519F5D9F
-P 7850 2400
-F 0 "D1" H 7850 2500 50  0000 C CNN
-F 1 "LED" H 7850 2300 50  0000 C CNN
-F 2 "~" H 7850 2400 60  0000 C CNN
-F 3 "~" H 7850 2400 60  0000 C CNN
-	1    7850 2400
+P 8850 1900
+F 0 "D1" H 8850 2000 50  0000 C CNN
+F 1 "LED" H 8850 1800 50  0000 C CNN
+F 2 "~" H 8850 1900 60  0000 C CNN
+F 3 "~" H 8850 1900 60  0000 C CNN
+	1    8850 1900
 	0    1    1    0   
 $EndComp
 $Comp
 L R R4
 U 1 1 519F5DAE
-P 7850 2900
-F 0 "R4" V 7930 2900 40  0000 C CNN
-F 1 "330" V 7857 2901 40  0000 C CNN
-F 2 "~" V 7780 2900 30  0000 C CNN
-F 3 "~" H 7850 2900 30  0000 C CNN
-	1    7850 2900
+P 8850 2400
+F 0 "R4" V 8930 2400 40  0000 C CNN
+F 1 "330" V 8857 2401 40  0000 C CNN
+F 2 "~" V 8780 2400 30  0000 C CNN
+F 3 "~" H 8850 2400 30  0000 C CNN
+	1    8850 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR08
 U 1 1 519F5DBB
-P 7850 3200
-F 0 "#PWR08" H 7850 3200 30  0001 C CNN
-F 1 "GND" H 7850 3130 30  0001 C CNN
-F 2 "" H 7850 3200 60  0001 C CNN
-F 3 "" H 7850 3200 60  0001 C CNN
-	1    7850 3200
+P 8850 2700
+F 0 "#PWR08" H 8850 2700 30  0001 C CNN
+F 1 "GND" H 8850 2630 30  0001 C CNN
+F 2 "" H 8850 2700 60  0001 C CNN
+F 3 "" H 8850 2700 60  0001 C CNN
+	1    8850 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 3200 7850 3150
+	8850 2700 8850 2650
 Wire Wire Line
-	7850 2650 7850 2600
+	8850 2150 8850 2100
 Wire Wire Line
-	7150 2150 7200 2150
+	8150 1650 8200 1650
 Wire Wire Line
-	7800 2150 7850 2150
+	8800 1650 8850 1650
 Wire Wire Line
-	7850 2150 7850 2200
+	8850 1650 8850 1700
 Text GLabel 5900 6800 2    60   Input ~ 0
 20
 Wire Wire Line
@@ -1024,7 +1024,7 @@ Wire Wire Line
 Wire Wire Line
 	10350 5750 10350 5600
 Wire Wire Line
-	10600 5600 10600 5750
+	10600 5600 10600 6650
 $Comp
 L R R3
 U 1 1 525945DB
@@ -1072,7 +1072,7 @@ USB_VBUS
 Text GLabel 3150 3000 0    60   Input ~ 0
 3.3V_SUPPLY
 Wire Wire Line
-	4100 2850 4000 2850
+	4000 2850 4100 2850
 Wire Wire Line
 	4050 2850 4050 2750
 Wire Wire Line
@@ -1083,7 +1083,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 2700 3500 2700
 Wire Wire Line
-	4100 2700 4000 2700
+	4000 2700 4100 2700
 Wire Wire Line
 	4050 2700 4050 2600
 Wire Wire Line
@@ -1101,7 +1101,7 @@ Wire Wire Line
 	4000 2950 4000 3000
 Connection ~ 4000 3000
 Wire Wire Line
-	4100 3150 3850 3150
+	3850 3150 4100 3150
 Wire Wire Line
 	3850 3300 4100 3300
 Wire Wire Line
@@ -1122,4 +1122,93 @@ Wire Wire Line
 Wire Wire Line
 	4000 3250 4000 3300
 Connection ~ 4000 3300
+$Comp
+L C C5
+U 1 1 525D76CD
+P 10350 6250
+F 0 "C5" H 10350 6350 40  0000 L CNN
+F 1 "0.1uF" H 10356 6165 40  0000 L CNN
+F 2 "~" H 10388 6100 30  0000 C CNN
+F 3 "~" H 10350 6250 60  0000 C CNN
+	1    10350 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 6450 10350 6550
+Wire Wire Line
+	10350 6550 10600 6550
+Connection ~ 10600 6550
+Wire Wire Line
+	10350 6050 10500 6050
+Wire Wire Line
+	10500 6050 10500 5700
+Wire Wire Line
+	10500 5700 10350 5700
+Connection ~ 10350 5700
+Text GLabel 7400 6050 0    60   Input ~ 0
+USB_VBUS
+$Comp
+L GND #PWR010
+U 1 1 525D7894
+P 7550 6900
+F 0 "#PWR010" H 7550 6900 30  0001 C CNN
+F 1 "GND" H 7550 6830 30  0001 C CNN
+F 2 "" H 7550 6900 60  0001 C CNN
+F 3 "" H 7550 6900 60  0001 C CNN
+	1    7550 6900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 6050 0    60   Input ~ 0
+3.3V_SUPPLY
+Wire Wire Line
+	7400 6050 7550 6050
+Wire Wire Line
+	8500 6050 8650 6050
+$Comp
+L GND #PWR011
+U 1 1 525D7A5B
+P 8650 6900
+F 0 "#PWR011" H 8650 6900 30  0001 C CNN
+F 1 "GND" H 8650 6830 30  0001 C CNN
+F 2 "" H 8650 6900 60  0001 C CNN
+F 3 "" H 8650 6900 60  0001 C CNN
+	1    8650 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 525D7B0A
+P 7550 6450
+F 0 "C3" H 7550 6550 40  0000 L CNN
+F 1 "0.1uF" H 7556 6365 40  0000 L CNN
+F 2 "~" H 7588 6300 30  0000 C CNN
+F 3 "~" H 7550 6450 60  0000 C CNN
+	1    7550 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 525D7B1A
+P 8650 6450
+F 0 "C4" H 8650 6550 40  0000 L CNN
+F 1 "0.1uF" H 8656 6365 40  0000 L CNN
+F 2 "~" H 8688 6300 30  0000 C CNN
+F 3 "~" H 8650 6450 60  0000 C CNN
+	1    8650 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 6050 8650 6250
+Wire Wire Line
+	8650 6650 8650 6900
+Wire Wire Line
+	7550 6900 7550 6650
+Wire Wire Line
+	7550 6050 7550 6250
+Text Notes 8750 5100 0    60   ~ 0
+nReset has internal pull-up, sec 6.2.2.1 of manual
+Text Notes 7400 5850 0    60   ~ 0
+pwr supply decoupling
+Text Notes 8050 1350 0    60   ~ 0
+optionally connect led
 $EndSCHEMATC
