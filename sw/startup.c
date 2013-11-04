@@ -55,6 +55,17 @@
 __attribute__ ((section(".co_stack")))
 unsigned long pulStack[STACK_SIZE];
 
+//
+// Flash configuration fields, be careful modifying these as the chip can be
+//  permanently secured! See section 27.3.1 of the user manual,
+//  "Flash Configuration Field Description".
+//
+__attribute__ ((section(".flashconfig")))
+const unsigned long flashConfig[] = {
+    0xffffffff, 0xffffffff,
+    0xffffffff, 0xfffffffe,
+};
+
 #define WEAK __attribute__ ((weak))
 
 //*****************************************************************************

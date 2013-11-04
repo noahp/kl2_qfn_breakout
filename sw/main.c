@@ -2,7 +2,7 @@
 
 void delay(void) {
     int i;
-    for(i = 0; i < 1000000; i++);
+    for(i = 0; i < 1000000/2; i++);
 }
 
 void toggle_heartbeat_led(void) {
