@@ -1,6 +1,7 @@
 How to set up toolchain + debugger
 =====
-I'm using gcc-arm, codeblocks, and SEGGER J-Link.
+I'm using gcc-arm, codeblocks, and SEGGER J-Link.  
+Note that I had good results with a project directory path with no spaces.
 
 Setup
 -----
