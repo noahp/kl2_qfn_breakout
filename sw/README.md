@@ -15,7 +15,7 @@ CRITICAL! must check "Full (Debug) log for debug to work on my setup.
 ![add config](https://raw.github.com/noahp/kl2_qfn_breakout/master/sw/docs/gdb_debug.png)  
 Executable path is the path to arm-none-eabi-gdb  
 ![config gcc arm debug](https://raw.github.com/noahp/kl2_qfn_breakout/master/sw/docs/gdb_debug_cfg.png)
-4. install SEGGER J-Link software.
+4. install SEGGER J-Link software. it's a good idea to check if you can connect to the target using the J-Link Commander tool, to verify your connections/drivers are working.
 
 Use
 -----
