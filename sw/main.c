@@ -1,3 +1,9 @@
+
+/*
+    Simple blinky main.c.
+*/
+
+
 #include "MKL25Z4.h"
 
 void delay(void) {
@@ -10,6 +16,8 @@ void toggle_heartbeat_led(void) {
 }
 
 int main(void) {
+    uint32_t blinkCount = 0;
+
     // disable COP
     SIM_COPC = 0;
 
@@ -26,6 +34,7 @@ int main(void) {
     GPIOB_PDDR |= (1 << 0);
 
     while(1){
+        blinkCount++;
         toggle_heartbeat_led();
         delay();
         toggle_heartbeat_led();

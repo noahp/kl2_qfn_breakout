@@ -39,7 +39,11 @@
 		<Extensions>
 			<code_completion />
 			<envvars />
-			<debugger />
+			<debugger>
+				<remote_debugging>
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="2331" additional_cmds="monitor reset 0&#x0A;break main&#x0A;load&#x0A;continue" />
+				</remote_debugging>
+			</debugger>
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
