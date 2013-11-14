@@ -38,28 +38,10 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/crt0.o
  .ARM.attributes
                 0x00000000       0x14 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/crt0.o
- .text          0x00000000      0x18c obj\Debug\src\arm_cm0.o
- .data          0x00000000        0x0 obj\Debug\src\arm_cm0.o
- .bss           0x00000000        0x0 obj\Debug\src\arm_cm0.o
- .debug_info    0x00000000      0x3d8 obj\Debug\src\arm_cm0.o
- .debug_abbrev  0x00000000      0x108 obj\Debug\src\arm_cm0.o
- .debug_loc     0x00000000      0x138 obj\Debug\src\arm_cm0.o
- .debug_aranges
-                0x00000000       0x20 obj\Debug\src\arm_cm0.o
- .debug_line    0x00000000      0x146 obj\Debug\src\arm_cm0.o
- .debug_str     0x00000000      0x23d obj\Debug\src\arm_cm0.o
- .comment       0x00000000       0x71 obj\Debug\src\arm_cm0.o
- .ARM.attributes
-                0x00000000       0x32 obj\Debug\src\arm_cm0.o
- .debug_frame   0x00000000       0xc8 obj\Debug\src\arm_cm0.o
- .data          0x00000000        0x0 obj\Debug\src\main.o
- .bss           0x00000000        0x0 obj\Debug\src\main.o
- .data          0x00000000        0x0 obj\Debug\src\startup.o
- .bss           0x00000000        0x0 obj\Debug\src\startup.o
- .data          0x00000000        0x0 obj\Debug\src\tcb.o
- .data          0x00000000        0x0 obj\Debug\src\tcblink.o
- .bss           0x00000000        0x0 obj\Debug\src\tcblink.o
- .data          0x00000000        0x0 obj\Debug\src\uos.o
+ .data          0x00000000        0x0 obj\Debug\main.o
+ .bss           0x00000000        0x0 obj\Debug\main.o
+ .data          0x00000000        0x0 obj\Debug\startup.o
+ .bss           0x00000000        0x0 obj\Debug\startup.o
  .text          0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib\libc_s.a(lib_a-__atexit2.o)
  .data          0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib\libc_s.a(lib_a-__atexit2.o)
  .bss           0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib\libc_s.a(lib_a-__atexit2.o)
@@ -140,107 +122,82 @@ Linker script and memory map
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crti.o
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crtbegin.o
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/crt0.o
-LOAD obj\Debug\src\arm_cm0.o
-LOAD obj\Debug\src\main.o
-LOAD obj\Debug\src\startup.o
-LOAD obj\Debug\src\tcb.o
-LOAD obj\Debug\src\tcblink.o
-LOAD obj\Debug\src\uos.o
+LOAD obj\Debug\main.o
+LOAD obj\Debug\startup.o
 
 .interrupts     0x00000000       0xc0
  *(.isr_vector .isr_vector.*)
- .isr_vector    0x00000000       0xc0 obj\Debug\src\startup.o
+ .isr_vector    0x00000000       0xc0 obj\Debug\startup.o
                 0x00000000                g_pfnVectors
 
 .flashconfig    0x00000400       0x10
  *(.flashconfig .flashconfig.*)
- .flashconfig   0x00000400       0x10 obj\Debug\src\startup.o
+ .flashconfig   0x00000400       0x10 obj\Debug\startup.o
                 0x00000400                flashConfig
 
-.text           0x00000410      0x70c
+.text           0x00000410      0x10c
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x00000410       0xe0 obj\Debug\src\main.o
+ .text          0x00000410       0xa0 obj\Debug\main.o
                 0x00000410                delay
                 0x00000434                toggle_heartbeat_led
-                0x00000448                main_task_led
-                0x00000480                main_init_uos
-                0x000004a0                main
- .text          0x000004f0       0x6c obj\Debug\src\startup.o
-                0x000004f0                RTCSIntHandler
-                0x000004f0                FTM1IntHandler
-                0x000004f0                USBOTGIntHandler
-                0x000004f0                UART0SEIntHandler
-                0x000004f0                UART2SEIntHandler
-                0x000004f0                FTM2IntHandler
-                0x000004f0                I2C1IntHandler
-                0x000004f0                PORTDIntHandler
-                0x000004f0                Default_ResetHandler
-                0x000004f0                DMA1IntHandler
-                0x000004f0                DACIntHandler
-                0x000004f0                ACMPIntHandler
-                0x000004f0                ResetHandler
-                0x000004f0                LVDIntHandler
-                0x000004f0                PORTAIntHandler
-                0x000004f0                SPI1IntHandler
-                0x000004f0                DMA3IntHandler
-                0x000004f0                PITIntHandler
-                0x000004f0                FTFAIntHandler
-                0x000004f0                LPTMRIntHandler
-                0x000004f0                DMA2IntHandler
-                0x000004f0                TSIIntHandler
-                0x000004f0                UART1SEIntHandler
-                0x000004f0                ADCIntHandler
-                0x000004f0                DMA0IntHandler
-                0x000004f0                I2C0IntHandler
-                0x000004f0                SPI0IntHandler
-                0x000004f0                RTCAIntHandler
-                0x000004f0                FTM0IntHandler
-                0x000004f0                LLWUIntHandler
-                0x000004f0                MCGIntHandler
-                0x00000554                MemManageIntHandler
-                0x00000554                SVCIntHandler
-                0x00000554                UsageFaultIntHandler
-                0x00000554                NMIIntHandler
-                0x00000554                SysTickIntHandler
-                0x00000554                DebugMonIntHandler
-                0x00000554                PendSVIntHandler
-                0x00000554                HardFaultIntHandler
-                0x00000554                BusFaultIntHandler
- .text          0x0000055c       0x5c obj\Debug\src\tcb.o
-                0x0000055c                tcb_stack_init
- .text          0x000005b8      0x1bc obj\Debug\src\tcblink.o
-                0x000005b8                tcblink_init
-                0x000005c8                tcblink_push
-                0x0000060c                tcblink_pull
-                0x00000660                tcblink_pull_with
-                0x000006c8                tcblink_pull_highest_priority
-                0x00000748                tcblink_list
- .text          0x00000774      0x3a8 obj\Debug\src\uos.o
-                0x000007e8                schedule
-                0x0000086c                SysTick_Handler
-                0x000008e8                PendSV_Handler
-                0x00000930                SVC_Handler
-                0x00000a08                uos_kernel_init
-                0x00000a38                uos_kernel_start
-                0x00000a44                uos_task_setup
-                0x00000afc                uos_task_sleep
-                0x00000b10                uos_task_yield
+                0x00000448                main
+ .text          0x000004b0       0x6c obj\Debug\startup.o
+                0x000004b0                RTCSIntHandler
+                0x000004b0                FTM1IntHandler
+                0x000004b0                USBOTGIntHandler
+                0x000004b0                UART0SEIntHandler
+                0x000004b0                UART2SEIntHandler
+                0x000004b0                FTM2IntHandler
+                0x000004b0                I2C1IntHandler
+                0x000004b0                PORTDIntHandler
+                0x000004b0                Default_ResetHandler
+                0x000004b0                DMA1IntHandler
+                0x000004b0                DACIntHandler
+                0x000004b0                ACMPIntHandler
+                0x000004b0                ResetHandler
+                0x000004b0                LVDIntHandler
+                0x000004b0                PORTAIntHandler
+                0x000004b0                SPI1IntHandler
+                0x000004b0                DMA3IntHandler
+                0x000004b0                PITIntHandler
+                0x000004b0                FTFAIntHandler
+                0x000004b0                LPTMRIntHandler
+                0x000004b0                DMA2IntHandler
+                0x000004b0                TSIIntHandler
+                0x000004b0                UART1SEIntHandler
+                0x000004b0                ADCIntHandler
+                0x000004b0                DMA0IntHandler
+                0x000004b0                I2C0IntHandler
+                0x000004b0                SPI0IntHandler
+                0x000004b0                RTCAIntHandler
+                0x000004b0                FTM0IntHandler
+                0x000004b0                LLWUIntHandler
+                0x000004b0                MCGIntHandler
+                0x00000514                MemManageIntHandler
+                0x00000514                SVCIntHandler
+                0x00000514                UsageFaultIntHandler
+                0x00000514                NMIIntHandler
+                0x00000514                SysTickIntHandler
+                0x00000514                DebugMonIntHandler
+                0x00000514                PendSVIntHandler
+                0x00000514                HardFaultIntHandler
+                0x00000514                BusFaultIntHandler
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
 
-.vfp11_veneer   0x00000b1c        0x0
+.vfp11_veneer   0x0000051c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00000b1c        0x0
+.v4_bx          0x0000051c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000b1c        0x0
+.iplt           0x0000051c        0x0
  .iplt          0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crtbegin.o
 
-.rel.dyn        0x00000b1c        0x0
+.rel.dyn        0x0000051c        0x0
  .rel.iplt      0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crtbegin.o
 
 .ARM.extab
@@ -248,11 +205,11 @@ LOAD obj\Debug\src\uos.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000b1c                . = ALIGN (0x4)
-                0x00000b1c                _etext = .
-                0x00000b1c                _sidata = .
+                0x0000051c                . = ALIGN (0x4)
+                0x0000051c                _etext = .
+                0x0000051c                _sidata = .
 
-.data           0x1ffff000        0x0 load address 0x00000b1c
+.data           0x1ffff000        0x0 load address 0x0000051c
                 0x1ffff000                _sdata = .
  *(.data .data.*)
                 0x1ffff000                . = ALIGN (0x4)
@@ -261,22 +218,20 @@ LOAD obj\Debug\src\uos.o
 .igot.plt       0x1ffff000        0x0
  .igot.plt      0x00000000        0x0 c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crtbegin.o
 
-.bss            0x1ffff000      0x240
+.bss            0x1ffff000        0x0
                 0x1ffff000                _sbss = .
  *(.bss .bss.*)
- .bss           0x1ffff000      0x180 obj\Debug\src\tcb.o
- .bss           0x1ffff180       0xc0 obj\Debug\src\uos.o
  *(COMMON)
-                0x1ffff240                . = ALIGN (0x4)
-                0x1ffff240                _ebss = .
+                0x1ffff000                . = ALIGN (0x4)
+                0x1ffff000                _ebss = .
 
-.co_stack       0x1ffff240      0x400
-                0x1ffff240                . = ALIGN (0x8)
+.co_stack       0x1ffff000      0x400
+                0x1ffff000                . = ALIGN (0x8)
  *(.co_stack .co_stack.*)
- .co_stack      0x1ffff240      0x400 obj\Debug\src\startup.o
-                0x1ffff240                pulStack
-                0x1ffff640                . = ALIGN (0x4)
-                0x1ffff640                _end = .
+ .co_stack      0x1ffff000      0x400 obj\Debug\startup.o
+                0x1ffff000                pulStack
+                0x1ffff400                . = ALIGN (0x4)
+                0x1ffff400                _end = .
 START GROUP
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib\libc_s.a
@@ -285,82 +240,46 @@ LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-
 LOAD c:/program files/gnu tools arm embedded/4.7 2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/crtn.o
 OUTPUT(bin\Debug\kl24.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x109f
- .debug_info    0x00000000      0x452 obj\Debug\src\main.o
- .debug_info    0x00000452      0x13c obj\Debug\src\startup.o
- .debug_info    0x0000058e       0xbb obj\Debug\src\tcb.o
- .debug_info    0x00000649      0x388 obj\Debug\src\tcblink.o
- .debug_info    0x000009d1      0x6ce obj\Debug\src\uos.o
+.debug_info     0x00000000      0x55e
+ .debug_info    0x00000000      0x422 obj\Debug\main.o
+ .debug_info    0x00000422      0x13c obj\Debug\startup.o
 
-.debug_abbrev   0x00000000      0x64e
- .debug_abbrev  0x00000000      0x145 obj\Debug\src\main.o
- .debug_abbrev  0x00000145       0xa7 obj\Debug\src\startup.o
- .debug_abbrev  0x000001ec       0x99 obj\Debug\src\tcb.o
- .debug_abbrev  0x00000285      0x14b obj\Debug\src\tcblink.o
- .debug_abbrev  0x000003d0      0x27e obj\Debug\src\uos.o
+.debug_abbrev   0x00000000      0x1ba
+ .debug_abbrev  0x00000000      0x113 obj\Debug\main.o
+ .debug_abbrev  0x00000113       0xa7 obj\Debug\startup.o
 
-.debug_loc      0x00000000      0x4c8
- .debug_loc     0x00000000       0xf4 obj\Debug\src\main.o
- .debug_loc     0x000000f4       0x64 obj\Debug\src\startup.o
- .debug_loc     0x00000158       0x38 obj\Debug\src\tcb.o
- .debug_loc     0x00000190      0x150 obj\Debug\src\tcblink.o
- .debug_loc     0x000002e0      0x1e8 obj\Debug\src\uos.o
+.debug_loc      0x00000000      0x100
+ .debug_loc     0x00000000       0x9c obj\Debug\main.o
+ .debug_loc     0x0000009c       0x64 obj\Debug\startup.o
 
-.debug_aranges  0x00000000       0xa0
+.debug_aranges  0x00000000       0x40
  .debug_aranges
-                0x00000000       0x20 obj\Debug\src\main.o
+                0x00000000       0x20 obj\Debug\main.o
  .debug_aranges
-                0x00000020       0x20 obj\Debug\src\startup.o
- .debug_aranges
-                0x00000040       0x20 obj\Debug\src\tcb.o
- .debug_aranges
-                0x00000060       0x20 obj\Debug\src\tcblink.o
- .debug_aranges
-                0x00000080       0x20 obj\Debug\src\uos.o
+                0x00000020       0x20 obj\Debug\startup.o
 
-.debug_line     0x00000000      0x596
- .debug_line    0x00000000      0x156 obj\Debug\src\main.o
- .debug_line    0x00000156       0x98 obj\Debug\src\startup.o
- .debug_line    0x000001ee       0xa3 obj\Debug\src\tcb.o
- .debug_line    0x00000291      0x11d obj\Debug\src\tcblink.o
- .debug_line    0x000003ae      0x1e8 obj\Debug\src\uos.o
+.debug_line     0x00000000      0x1ce
+ .debug_line    0x00000000      0x13a obj\Debug\main.o
+ .debug_line    0x0000013a       0x94 obj\Debug\startup.o
 
-.debug_str      0x00000000      0x711
- .debug_str     0x00000000      0x28f obj\Debug\src\main.o
-                                0x2c3 (size before relaxing)
- .debug_str     0x0000028f       0xc7 obj\Debug\src\startup.o
-                                0x12b (size before relaxing)
- .debug_str     0x00000356       0x72 obj\Debug\src\tcb.o
-                                 0xd1 (size before relaxing)
- .debug_str     0x000003c8      0x170 obj\Debug\src\tcblink.o
-                                0x204 (size before relaxing)
- .debug_str     0x00000538      0x1d9 obj\Debug\src\uos.o
-                                0x3a2 (size before relaxing)
+.debug_str      0x00000000      0x332
+ .debug_str     0x00000000      0x26f obj\Debug\main.o
+                                0x2a3 (size before relaxing)
+ .debug_str     0x0000026f       0xc3 obj\Debug\startup.o
+                                0x127 (size before relaxing)
 
 .comment        0x00000000       0x70
- .comment       0x00000000       0x70 obj\Debug\src\main.o
+ .comment       0x00000000       0x70 obj\Debug\main.o
                                  0x71 (size before relaxing)
- .comment       0x00000000       0x71 obj\Debug\src\startup.o
- .comment       0x00000000       0x71 obj\Debug\src\tcb.o
- .comment       0x00000000       0x71 obj\Debug\src\tcblink.o
- .comment       0x00000000       0x71 obj\Debug\src\uos.o
+ .comment       0x00000000       0x71 obj\Debug\startup.o
 
 .ARM.attributes
                 0x00000000       0x2d
  .ARM.attributes
-                0x00000000       0x32 obj\Debug\src\main.o
+                0x00000000       0x32 obj\Debug\main.o
  .ARM.attributes
-                0x00000032       0x32 obj\Debug\src\startup.o
- .ARM.attributes
-                0x00000064       0x32 obj\Debug\src\tcb.o
- .ARM.attributes
-                0x00000096       0x32 obj\Debug\src\tcblink.o
- .ARM.attributes
-                0x000000c8       0x32 obj\Debug\src\uos.o
+                0x00000032       0x32 obj\Debug\startup.o
 
-.debug_frame    0x00000000      0x348
- .debug_frame   0x00000000       0xa4 obj\Debug\src\main.o
- .debug_frame   0x000000a4       0x4c obj\Debug\src\startup.o
- .debug_frame   0x000000f0       0x30 obj\Debug\src\tcb.o
- .debug_frame   0x00000120       0xd0 obj\Debug\src\tcblink.o
- .debug_frame   0x000001f0      0x158 obj\Debug\src\uos.o
+.debug_frame    0x00000000       0xb8
+ .debug_frame   0x00000000       0x6c obj\Debug\main.o
+ .debug_frame   0x0000006c       0x4c obj\Debug\startup.o
