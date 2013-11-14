@@ -13,7 +13,7 @@
 				<Option type="1" />
 				<Option compiler="armelfgcc" />
 				<Compiler>
-					<Add option="-Os" />
+					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
 					<Add after="arm-none-eabi-objcopy.exe -O ihex bin\Debug\kl24.elf bin\Debug\kl24.hex" />
