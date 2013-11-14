@@ -41,7 +41,10 @@
 			<envvars />
 			<debugger>
 				<remote_debugging>
-					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="2331" additional_cmds="monitor reset 0&#x0A;break main&#x0A;load&#x0A;continue" />
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="2331" additional_cmds="monitor reset 0&#x0A;load" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="2331" additional_cmds="monitor reset 0&#x0A;load" />
 				</remote_debugging>
 			</debugger>
 			<lib_finder disable_auto="1" />
