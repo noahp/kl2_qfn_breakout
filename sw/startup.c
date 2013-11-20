@@ -43,6 +43,8 @@
 //
 //*****************************************************************************
 
+#include "MKL25Z4.h"
+
 //*****************************************************************************
 //
 // Stack Configuration
@@ -215,6 +217,18 @@ void (* const g_pfnVectors[])(void) =
     PORTDIntHandler,                        // PORTD handler
 };
 
+void StartupInitClock(void)
+{
+    // select Mid range of MCG_C4[DRST_DRS]
+    uint32_t temp32;
+
+    temp32 = MCG_C4 & (~MCG_C4_DRST_DRS_MASK);
+
+    temp32 |= MCG_C4_DRST_DRS(0x1);
+
+    MCG_C4 = temp32;
+}
+
 //*****************************************************************************
 //
 //! \brief This is the code that gets called when the processor first
@@ -230,14 +244,13 @@ void (* const g_pfnVectors[])(void) =
 //*****************************************************************************
 void Default_ResetHandler(void)
 {
-    //
-    // Initialize data and bss
-    //
     unsigned long *pulSrc, *pulDest;
 
-    //
+    // clock initialization first
+    StartupInitClock();
+
+    // Initialize data and bss
     // Copy the data segment initializers from flash to SRAM
-    //
     pulSrc = &_sidata;
 
     for(pulDest = &_sdata; pulDest < &_edata; )
@@ -245,18 +258,17 @@ void Default_ResetHandler(void)
         *(pulDest++) = *(pulSrc++);
     }
 
-    //
     // Zero fill the bss segment.
-    //
     for(pulDest = &_sbss; pulDest < &_ebss; )
     {
         *(pulDest++) = 0;
     }
 
-    //
     // Call the application's entry point.
-    //
     main();
+
+    // shouldn't return
+    while(1);
 }
 
 //*****************************************************************************
@@ -307,23 +319,10 @@ void Default_ResetHandler(void)
 #pragma weak PORTDIntHandler = Default_ResetHandler
 
 //*****************************************************************************
-//
-//! \brief This is the code that gets called when the processor receives an
-//! unexpected interrupt.
-//!
-//! \param None.
-//!
-//! This simply enters an infinite loop, preserving the system state for
-//! examination by a debugger.
-//!
-//! \return None.
+//  Default interrupt handler
 //*****************************************************************************
 static void DefaultIntHandler(void)
 {
-    //
     // Go into an infinite loop.
-    //
-    while (1)
-    {
-    }
+    while(1);
 }
