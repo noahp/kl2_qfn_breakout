@@ -17,7 +17,7 @@ Executable path is the path to arm-none-eabi-gdb
 ![compiler settings](https://raw.github.com/noahp/kl2_qfn_breakout/master/sw/docs/compiler_cfg.png)
 ![compiler search dirs](https://raw.github.com/noahp/kl2_qfn_breakout/master/sw/docs/compiler_cfg_search.png)
 under Advanced options...->Others
-
+![compiler advanced options](https://raw.github.com/noahp/kl2_qfn_breakout/master/sw/docs/compiler_adv.png)
 5. install SEGGER J-Link software. it's a good idea to check if you can connect to the target using the J-Link Commander tool, to verify your connections/drivers are working.
 
 Use
