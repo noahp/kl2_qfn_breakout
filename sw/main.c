@@ -1,8 +1,4 @@
 
-/*
-    Simple blinky main.c.
-*/
-
 #include "MKL25Z4.h"
 
 void delay(void) {
