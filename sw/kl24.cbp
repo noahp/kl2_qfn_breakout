@@ -27,15 +27,24 @@
 		<Linker>
 			<Add option="--specs=nano.specs -Wl,--gc-sections,-Map,kl24.map,-Tlink.ld" />
 		</Linker>
-		<Unit filename="MKL25Z4.h" />
 		<Unit filename="Makefile" />
 		<Unit filename="link.ld" />
-		<Unit filename="main.c">
+		<Unit filename="src/MKL25Z4.h" />
+		<Unit filename="src/interrupts.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="startup.c">
+		<Unit filename="src/interrupts.h" />
+		<Unit filename="src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/startup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/startup.h" />
+		<Unit filename="src/systick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/systick.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

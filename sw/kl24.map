@@ -139,37 +139,38 @@ LOAD obj\Debug\src\systick.o
  .flashconfig   0x00000400       0x10 obj\Debug\src\startup.o
                 0x00000400                flashConfig
 
-.text           0x00000410      0x1e4
+.text           0x00000410      0x1f0
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000410       0xc4 obj\Debug\src\interrupts.o
                 0x00000450                ResetHandler
                 0x000004c0                SysTickIntHandler
                 0x000004cc                DefaultIntHandler
- .text          0x000004d4       0x90 obj\Debug\src\main.o
-                0x000004d4                main_init
-                0x00000524                main_led
-                0x00000554                main
- .text          0x00000564       0x64 obj\Debug\src\startup.o
-                0x00000564                StartupInitClock
- .text          0x000005c8       0x2c obj\Debug\src\systick.o
-                0x000005c8                systick_update
-                0x000005e0                systick_getMs
+ .text          0x000004d4       0x9c obj\Debug\src\main.o
+                0x000004d4                main_init_io
+                0x00000524                main_init_spi
+                0x0000052c                main_led
+                0x0000055c                main
+ .text          0x00000570       0x64 obj\Debug\src\startup.o
+                0x00000570                StartupInitClock
+ .text          0x000005d4       0x2c obj\Debug\src\systick.o
+                0x000005d4                systick_update
+                0x000005ec                systick_getMs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
 
-.vfp11_veneer   0x000005f4        0x0
+.vfp11_veneer   0x00000600        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000005f4        0x0
+.v4_bx          0x00000600        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000005f4        0x0
+.iplt           0x00000600        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/crtbegin.o
 
-.rel.dyn        0x000005f4        0x0
+.rel.dyn        0x00000600        0x0
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/crtbegin.o
 
 .ARM.extab
@@ -177,11 +178,11 @@ LOAD obj\Debug\src\systick.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000005f4                . = ALIGN (0x4)
-                0x000005f4                _etext = .
-                0x000005f4                _sidata = .
+                0x00000600                . = ALIGN (0x4)
+                0x00000600                _etext = .
+                0x00000600                _sidata = .
 
-.data           0x1ffff000        0x0 load address 0x000005f4
+.data           0x1ffff000        0x0 load address 0x00000600
                 0x1ffff000                _sdata = .
  *(.data .data.*)
                 0x1ffff000                . = ALIGN (0x4)
@@ -215,11 +216,11 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm
 LOAD c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/crtn.o
 OUTPUT(bin\Debug\kl24.elf elf32-littlearm)
 
-.debug_info     0x00000000      0xb50
+.debug_info     0x00000000      0xb66
  .debug_info    0x00000000      0x19f obj\Debug\src\interrupts.o
- .debug_info    0x0000019f      0x418 obj\Debug\src\main.o
- .debug_info    0x000005b7      0x4e4 obj\Debug\src\startup.o
- .debug_info    0x00000a9b       0xb5 obj\Debug\src\systick.o
+ .debug_info    0x0000019f      0x42e obj\Debug\src\main.o
+ .debug_info    0x000005cd      0x4e4 obj\Debug\src\startup.o
+ .debug_info    0x00000ab1       0xb5 obj\Debug\src\systick.o
 
 .debug_abbrev   0x00000000      0x366
  .debug_abbrev  0x00000000      0x10a obj\Debug\src\interrupts.o
@@ -227,11 +228,11 @@ OUTPUT(bin\Debug\kl24.elf elf32-littlearm)
  .debug_abbrev  0x0000020e       0xe0 obj\Debug\src\startup.o
  .debug_abbrev  0x000002ee       0x78 obj\Debug\src\systick.o
 
-.debug_loc      0x00000000      0x1d0
+.debug_loc      0x00000000      0x1fc
  .debug_loc     0x00000000       0xc8 obj\Debug\src\interrupts.o
- .debug_loc     0x000000c8       0x84 obj\Debug\src\main.o
- .debug_loc     0x0000014c       0x2c obj\Debug\src\startup.o
- .debug_loc     0x00000178       0x58 obj\Debug\src\systick.o
+ .debug_loc     0x000000c8       0xb0 obj\Debug\src\main.o
+ .debug_loc     0x00000178       0x2c obj\Debug\src\startup.o
+ .debug_loc     0x000001a4       0x58 obj\Debug\src\systick.o
 
 .debug_aranges  0x00000000       0x80
  .debug_aranges
@@ -243,20 +244,20 @@ OUTPUT(bin\Debug\kl24.elf elf32-littlearm)
  .debug_aranges
                 0x00000060       0x20 obj\Debug\src\systick.o
 
-.debug_line     0x00000000      0x3f4
+.debug_line     0x00000000      0x3f7
  .debug_line    0x00000000      0x115 obj\Debug\src\interrupts.o
- .debug_line    0x00000115      0x101 obj\Debug\src\main.o
- .debug_line    0x00000216       0xf7 obj\Debug\src\startup.o
- .debug_line    0x0000030d       0xe7 obj\Debug\src\systick.o
+ .debug_line    0x00000115      0x104 obj\Debug\src\main.o
+ .debug_line    0x00000219       0xf7 obj\Debug\src\startup.o
+ .debug_line    0x00000310       0xe7 obj\Debug\src\systick.o
 
-.debug_str      0x00000000      0x3d8
+.debug_str      0x00000000      0x3e9
  .debug_str     0x00000000      0x162 obj\Debug\src\interrupts.o
                                 0x196 (size before relaxing)
- .debug_str     0x00000162      0x1a4 obj\Debug\src\main.o
+ .debug_str     0x00000162      0x1b5 obj\Debug\src\main.o
+                                0x28b (size before relaxing)
+ .debug_str     0x00000317       0x81 obj\Debug\src\startup.o
                                 0x27a (size before relaxing)
- .debug_str     0x00000306       0x81 obj\Debug\src\startup.o
-                                0x27a (size before relaxing)
- .debug_str     0x00000387       0x51 obj\Debug\src\systick.o
+ .debug_str     0x00000398       0x51 obj\Debug\src\systick.o
                                 0x127 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -277,8 +278,8 @@ OUTPUT(bin\Debug\kl24.elf elf32-littlearm)
  .ARM.attributes
                 0x00000096       0x32 obj\Debug\src\systick.o
 
-.debug_frame    0x00000000      0x160
+.debug_frame    0x00000000      0x17c
  .debug_frame   0x00000000       0x88 obj\Debug\src\interrupts.o
- .debug_frame   0x00000088       0x64 obj\Debug\src\main.o
- .debug_frame   0x000000ec       0x2c obj\Debug\src\startup.o
- .debug_frame   0x00000118       0x48 obj\Debug\src\systick.o
+ .debug_frame   0x00000088       0x80 obj\Debug\src\main.o
+ .debug_frame   0x00000108       0x2c obj\Debug\src\startup.o
+ .debug_frame   0x00000134       0x48 obj\Debug\src\systick.o

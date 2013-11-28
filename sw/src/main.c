@@ -2,7 +2,7 @@
 #include "MKL25Z4.h"
 #include "systick.h"
 
-void main_init(void)
+void main_init_io(void)
 {
     // init ports
     // disable COP
@@ -21,6 +21,12 @@ void main_init(void)
     GPIOB_PDDR |= (1 << 0);
 }
 
+void main_init_spi(void)
+{
+    // init spi0
+
+}
+
 void main_led(void)
 {
     static uint32_t blinkTime = 0;
@@ -35,7 +41,8 @@ void main_led(void)
 
 int main(void) {
     // initialize the necessary
-    main_init();
+    main_init_io();
+    main_init_spi();
 
     while(1){
         // led task
