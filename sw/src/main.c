@@ -1,18 +1,10 @@
 
 #include "MKL25Z4.h"
+#include "systick.h"
 
-void delay(void) {
-    int i;
-    for(i = 0; i < 1000000/2; i++);
-}
-
-void toggle_heartbeat_led(void) {
-    GPIOB_PTOR = (1 << 0);
-}
-
-int main(void) {
-    uint32_t blinkCount = 0;
-
+void main_init(void)
+{
+    // init ports
     // disable COP
     SIM_COPC = 0;
 
@@ -27,13 +19,27 @@ int main(void) {
 
     // set B0 DDR to output
     GPIOB_PDDR |= (1 << 0);
+}
+
+void main_led(void)
+{
+    static uint32_t blinkTime = 0;
+
+    // blink every 250ms
+    if(systick_getMs() - blinkTime > 250){
+        blinkTime = systick_getMs();
+        // toggle
+        GPIOB_PTOR = (1 << 0);
+    }
+}
+
+int main(void) {
+    // initialize the necessary
+    main_init();
 
     while(1){
-        blinkCount++;
-        toggle_heartbeat_led();
-        delay();
-        toggle_heartbeat_led();
-        delay();
+        // led task
+        main_led();
     }
 
     return 0;

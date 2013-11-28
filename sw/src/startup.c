@@ -1,5 +1,6 @@
 
 #include "MKL25Z4.h"
+#include "interrupts.h"
 
 //*****************************************************************************
 //
@@ -23,71 +24,6 @@ const unsigned long flashConfig[] = {
     0xffffffff, 0xffffffff,
     0xffffffff, 0xfffffffe,
 };
-
-#define WEAK __attribute__ ((weak))
-
-//*****************************************************************************
-//
-// Declaration of the default fault handlers
-//
-//*****************************************************************************
-void WEAK  ResetHandler(void);
-void WEAK  NMIIntHandler(void);
-void WEAK  HardFaultIntHandler(void);
-void WEAK  MemManageIntHandler(void);
-void WEAK  BusFaultIntHandler(void);
-void WEAK  UsageFaultIntHandler(void);
-void WEAK  SVCIntHandler(void);
-void WEAK  DebugMonIntHandler(void);
-void WEAK  PendSVIntHandler(void);
-void WEAK  SysTickIntHandler(void);
-
-void WEAK  DMA0IntHandler(void);
-void WEAK  DMA1IntHandler(void);
-void WEAK  DMA2IntHandler(void);
-void WEAK  DMA3IntHandler(void);
-void WEAK  FTFAIntHandler(void);
-void WEAK  LVDIntHandler(void);
-void WEAK  LLWUIntHandler(void);
-void WEAK  I2C0IntHandler(void);
-void WEAK  I2C1IntHandler(void);
-void WEAK  SPI0IntHandler(void);
-void WEAK  SPI1IntHandler(void);
-void WEAK  UART0SEIntHandler(void);
-void WEAK  UART1SEIntHandler(void);
-void WEAK  UART2SEIntHandler(void);
-void WEAK  ADCIntHandler(void);
-void WEAK  ACMPIntHandler(void);
-void WEAK  FTM0IntHandler(void);
-void WEAK  FTM1IntHandler(void);
-void WEAK  FTM2IntHandler(void);
-void WEAK  RTCAIntHandler(void);
-void WEAK  RTCSIntHandler(void);
-void WEAK  PITIntHandler(void);
-void WEAK  USBOTGIntHandler(void);
-void WEAK  DACIntHandler(void);
-void WEAK  TSIIntHandler(void);
-void WEAK  MCGIntHandler(void);
-void WEAK  LPTMRIntHandler(void);
-void WEAK  PORTAIntHandler(void);
-void WEAK  PORTDIntHandler(void);
-
-// Start address for the initialization values of the .data section.
-extern unsigned long _sidata;
-// Start address for the .data section
-extern unsigned long _sdata;
-// End address for the .data section
-extern unsigned long _edata;
-// Start address for the .bss section
-extern unsigned long _sbss;
-// End address for the .bss section
-extern unsigned long _ebss;
-// End address for ram
-extern void _eram;
-
-extern int main(void);
-void ResetHandler(void);
-static void DefaultIntHandler(void);
 
 //
 // The minimal vector table for a Cortex M0+.  Note that the proper constructs
@@ -168,107 +104,4 @@ void StartupInitClock(void)
     SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
     // Set pin for CLKOUT
     PORTC_PCR3 = PORT_PCR_MUX(5) | PORT_PCR_DSE_MASK;
-}
-
-//*****************************************************************************
-//
-//! \brief This is the code that gets called when the processor first
-//! starts execution following a reset event.
-//!
-//! \param None.
-//!
-//! Only the absolutely necessary set is performed, after which the
-//! application supplied main() routine is called.
-//!
-//! \return None.
-//
-//*****************************************************************************
-void Default_ResetHandler(void)
-{
-    unsigned long *pulSrc, *pulDest;
-
-    // clock initialization first
-    StartupInitClock();
-
-    // Initialize data and bss
-    // Copy the data segment initializers from flash to SRAM
-    pulSrc = &_sidata;
-
-    for(pulDest = &_sdata; pulDest < &_edata; )
-    {
-        *(pulDest++) = *(pulSrc++);
-    }
-
-    // Zero fill the bss segment.
-    for(pulDest = &_sbss; pulDest < &_ebss; )
-    {
-        *(pulDest++) = 0;
-    }
-
-    // Call the application's entry point.
-    main();
-
-    // shouldn't return
-    while(1);
-}
-
-void Default_SysTickIntHandler(void)
-{
-
-}
-
-//*****************************************************************************
-//
-// Provide weak aliases for each Exception handler to the DefaultIntHandler.
-// As they are weak aliases, any function with the same name will override
-// this definition.
-//
-//*****************************************************************************
-#pragma weak ResetHandler = Default_ResetHandler
-#pragma weak NMIIntHandler = DefaultIntHandler
-#pragma weak HardFaultIntHandler = DefaultIntHandler
-#pragma weak MemManageIntHandler = DefaultIntHandler
-#pragma weak BusFaultIntHandler = DefaultIntHandler
-#pragma weak UsageFaultIntHandler = DefaultIntHandler
-#pragma weak SVCIntHandler = DefaultIntHandler
-#pragma weak DebugMonIntHandler = DefaultIntHandler
-#pragma weak PendSVIntHandler = DefaultIntHandler
-#pragma weak SysTickIntHandler = Default_SysTickIntHandler
-#pragma weak DMA0IntHandler = Default_ResetHandler
-#pragma weak DMA1IntHandler = Default_ResetHandler
-#pragma weak DMA2IntHandler = Default_ResetHandler
-#pragma weak DMA3IntHandler = Default_ResetHandler
-#pragma weak FTFAIntHandler = Default_ResetHandler
-#pragma weak LVDIntHandler = Default_ResetHandler
-#pragma weak LLWUIntHandler = Default_ResetHandler
-#pragma weak I2C0IntHandler = Default_ResetHandler
-#pragma weak I2C1IntHandler = Default_ResetHandler
-#pragma weak SPI0IntHandler = Default_ResetHandler
-#pragma weak SPI1IntHandler = Default_ResetHandler
-#pragma weak UART0SEIntHandler = Default_ResetHandler
-#pragma weak UART1SEIntHandler = Default_ResetHandler
-#pragma weak UART2SEIntHandler = Default_ResetHandler
-#pragma weak ADCIntHandler = Default_ResetHandler
-#pragma weak ACMPIntHandler = Default_ResetHandler
-#pragma weak FTM0IntHandler = Default_ResetHandler
-#pragma weak FTM1IntHandler = Default_ResetHandler
-#pragma weak FTM2IntHandler = Default_ResetHandler
-#pragma weak RTCAIntHandler = Default_ResetHandler
-#pragma weak RTCSIntHandler = Default_ResetHandler
-#pragma weak PITIntHandler = Default_ResetHandler
-#pragma weak USBOTGIntHandler = Default_ResetHandler
-#pragma weak DACIntHandler = Default_ResetHandler
-#pragma weak TSIIntHandler = Default_ResetHandler
-#pragma weak MCGIntHandler = Default_ResetHandler
-#pragma weak LPTMRIntHandler = Default_ResetHandler
-#pragma weak PORTAIntHandler = Default_ResetHandler
-#pragma weak PORTDIntHandler = Default_ResetHandler
-
-//*****************************************************************************
-//  Default interrupt handler
-//*****************************************************************************
-static void DefaultIntHandler(void)
-{
-    // Go into an infinite loop.
-    while(1);
 }
