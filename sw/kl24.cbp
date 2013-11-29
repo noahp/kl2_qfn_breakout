@@ -16,7 +16,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
-					<Add after="arm-none-eabi-objcopy.exe -O ihex bin\Debug\kl24.elf bin\Debug\kl24.hex" />
+					<Add after="arm-none-eabi-objcopy -O ihex bin/Debug/kl24.elf bin/Debug/kl24.hex" />
 				</ExtraCommands>
 			</Target>
 		</Build>
