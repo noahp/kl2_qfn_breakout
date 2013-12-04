@@ -14,7 +14,7 @@
 #define CLR_ERD()   (GPIOD_PCOR = (1 << 5))
 
 // blocking ms delay
-void delay(uint32_t ms)
+void delay_ms(uint32_t ms)
 {
     // get curent time
     uint32_t thisTime = systick_getMs();
@@ -102,10 +102,10 @@ void main_init_oled(void)
 
     // do some setup on the oled display
     // wait a ms after 3.3v comes up on reset
-    delay(1);
+    delay_ms(1);
     // reset low for 10ms
     CLR_RST();  // low
-    delay(10);
+    delay_ms(10);
     SET_RST();  // now high
     // r/w and e/rd stays low all the time, for spi.
     CLR_RW();
