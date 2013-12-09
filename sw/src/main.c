@@ -53,9 +53,35 @@ void ssd1306_command(uint8_t c)
     SPI0_D = c;
 }
 
+void ssd1306_data(uint8_t c)
+{
+    // wait until tx empty flag is set
+    while(!(SPI0_S & SPI_S_SPTEF_MASK));
+
+    // d/c pin high for data mode.
+    SET_DC();
+    // write the command
+    SPI0_D = c;
+}
+
 void main_init_oled(void)
 {
     // init necessary io
+    /*
+        presently:
+
+        blue    3.3v        -
+        black   cs          p25     c4/spi0_pcs0
+        white   spi_clk     p26     c5/spi0_sck
+        gray    spi_mosi    p27     c6/spi0_mosi
+        purple  rst         p28     c7(/spi0_miso)
+        yellow  r/w         p29     d4
+        orange  e/rd        p30     d5
+        red     d/c         p31     d6
+    */
+
+    // enable clocks for PORTC & PORTD
+    SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
     SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
     // pin 28, c7 output for rst
     PORTC_PCR7 = PORT_PCR_MUX(1);   // gpio
@@ -79,19 +105,16 @@ void main_init_oled(void)
 
     // init spi0
     // configure io pins for spi- alt 2
-    // enable clocks for PORTC
-    SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
-    // PTC4-5-6-7
+    // PTC4-5-6
     PORTC_PCR4 = PORT_PCR_MUX(2);
     PORTC_PCR5 = PORT_PCR_MUX(2);
     PORTC_PCR6 = PORT_PCR_MUX(2);
-    PORTC_PCR7 = PORT_PCR_MUX(2);
 
     // enable SPI0 module
     SIM_SCGC4 |= SIM_SCGC4_SPI0_MASK;
 
-    // configure as master, cs output driven automatically
-    SPI0_C1 |= (SPI_C1_MSTR_MASK | SPI_C1_SSOE_MASK);
+    // configure as master, cs output driven automatically, CPOL=1
+    SPI0_C1 |= (SPI_C1_MSTR_MASK | SPI_C1_SSOE_MASK | SPI_C1_CPOL_MASK);
     SPI0_C2 |= SPI_C2_MODFEN_MASK;
 
     // select clock divider- SPPR = 8, SPR = 1 (4)
@@ -110,6 +133,9 @@ void main_init_oled(void)
     // r/w and e/rd stays low all the time, for spi.
     CLR_RW();
     CLR_ERD();
+
+    // give it a few ms after reset goes high
+    delay_ms(5);
 
     // now initialize display controller
     // Init sequence for 128x64 OLED module
@@ -137,6 +163,21 @@ void main_init_oled(void)
     ssd1306_command(0x40);
     ssd1306_command(SSD1306_DISPLAYALLON_RESUME);           // 0xA4
     ssd1306_command(SSD1306_NORMALDISPLAY);                 // 0xA6
+
+    ssd1306_command(SSD1306_DISPLAYON);//--turn on oled panel
+
+    // display sample data...
+    {
+        uint32_t i;
+
+        ssd1306_command(SSD1306_SETLOWCOLUMN | 0x0);  // low col = 0
+        ssd1306_command(SSD1306_SETHIGHCOLUMN | 0x0);  // hi col = 0
+        ssd1306_command(SSD1306_SETSTARTLINE | 0x0); // line #0
+
+        for(i=0; i<(128*64/8); i++){
+            ssd1306_data(buffer[i]);
+        }
+    }
 }
 
 void main_led(void)
@@ -153,15 +194,22 @@ void main_led(void)
 
 void main_oled(void)
 {
-    static uint32_t spiTime = 0;
-
-    // service every 5ms
-    if(systick_getMs() - spiTime > 5){
-        spiTime = systick_getMs();
-        if(SPI0_S & SPI_S_SPTEF_MASK){
-            //SPI0_D = 0xA5;
-        }
-    }
+//    static uint32_t oledTime = 0;
+//    static int invMode = 0;
+//
+//    // service every 150ms
+//    if(systick_getMs() - oledTime > 150){
+//        oledTime = systick_getMs();
+//        if(SPI0_S & SPI_S_SPTEF_MASK){
+//            if(invMode){
+//                ssd1306_command(SSD1306_INVERTDISPLAY);
+//            }
+//            else{
+//                ssd1306_command(SSD1306_NORMALDISPLAY);
+//            }
+//            invMode = !invMode;
+//        }
+//    }
 }
 
 int main(void) {
