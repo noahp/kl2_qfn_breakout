@@ -30,6 +30,10 @@
 		<Unit filename="Makefile" />
 		<Unit filename="link.ld" />
 		<Unit filename="src/MKL25Z4.h" />
+		<Unit filename="src/font_5x8.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/font_5x8.h" />
 		<Unit filename="src/interrupts.c">
 			<Option compilerVar="CC" />
 		</Unit>

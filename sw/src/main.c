@@ -165,19 +165,6 @@ void main_init_oled(void)
     ssd1306_command(SSD1306_NORMALDISPLAY);                 // 0xA6
 
     ssd1306_command(SSD1306_DISPLAYON);//--turn on oled panel
-
-    // display sample data...
-    {
-        uint32_t i;
-
-        ssd1306_command(SSD1306_SETLOWCOLUMN | 0x0);  // low col = 0
-        ssd1306_command(SSD1306_SETHIGHCOLUMN | 0x0);  // hi col = 0
-        ssd1306_command(SSD1306_SETSTARTLINE | 0x0); // line #0
-
-        for(i=0; i<(128*64/8); i++){
-            ssd1306_data(buffer[i]);
-        }
-    }
 }
 
 void main_led(void)
@@ -192,24 +179,30 @@ void main_led(void)
     }
 }
 
+void display_oled_string(char *str)
+{
+    ssd1306_command(SSD1306_SETLOWCOLUMN | 0x0);  // low col = 0
+    ssd1306_command(SSD1306_SETHIGHCOLUMN | 0x0);  // hi col = 0
+    ssd1306_command(SSD1306_SETSTARTLINE | 0x0); // line #0
+
+    // for each chr in the string, print it to the display
+    while(*str != '\0'){
+
+        str++;
+    }
+
+}
+
 void main_oled(void)
 {
-//    static uint32_t oledTime = 0;
-//    static int invMode = 0;
-//
-//    // service every 150ms
-//    if(systick_getMs() - oledTime > 150){
-//        oledTime = systick_getMs();
-//        if(SPI0_S & SPI_S_SPTEF_MASK){
-//            if(invMode){
-//                ssd1306_command(SSD1306_INVERTDISPLAY);
-//            }
-//            else{
-//                ssd1306_command(SSD1306_NORMALDISPLAY);
-//            }
-//            invMode = !invMode;
-//        }
-//    }
+    static char * someString = "hello world!";
+    static uint32_t oledTime = 0;
+
+    // service every 150ms
+    if(systick_getMs() - oledTime > 150){
+        oledTime = systick_getMs();
+        display_oled_string(someString);
+    }
 }
 
 int main(void) {
