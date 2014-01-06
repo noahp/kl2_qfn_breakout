@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "30 dec 2013"
+Date "6 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -90,19 +90,6 @@ Wire Wire Line
 Wire Wire Line
 	1300 2200 1400 2200
 Wire Wire Line
-	6550 3300 7800 3300
-Wire Wire Line
-	7800 3300 7800 3450
-Connection ~ 7000 3450
-Wire Wire Line
-	6600 3450 6600 3550
-Wire Wire Line
-	6600 3550 6650 3550
-Connection ~ 6600 3450
-Wire Wire Line
-	6550 3450 7100 3450
-Connection ~ 6600 3300
-Wire Wire Line
 	4000 2300 4000 2550
 Wire Wire Line
 	5850 1600 5850 1700
@@ -131,10 +118,6 @@ Wire Wire Line
 Wire Wire Line
 	6650 3000 6550 3000
 Wire Wire Line
-	6600 3300 6600 3200
-Wire Wire Line
-	6600 3200 6650 3200
-Wire Wire Line
 	5550 4250 5550 4150
 Wire Wire Line
 	5400 4150 5400 4250
@@ -148,12 +131,6 @@ Wire Wire Line
 	4800 4250 4800 4150
 Wire Wire Line
 	3850 2400 4100 2400
-Wire Wire Line
-	7800 3450 7700 3450
-Wire Wire Line
-	7000 3850 7000 3950
-Wire Wire Line
-	7800 3850 7800 3950
 Wire Wire Line
 	4950 5900 5050 5900
 Wire Wire Line
@@ -199,72 +176,6 @@ F 3 "" H 4650 6150 60  0001 C CNN
 	1    4650 6150
 	1    0    0    -1  
 $EndComp
-$Comp
-L MKL24Z64VFM4 U1
-U 1 1 512F925B
-P 4800 3300
-F 0 "U1" H 4400 2650 60  0000 C CNN
-F 1 "MKL24Z64VFM4" H 4300 4700 60  0000 C CNN
-F 2 "" H 4800 3300 60  0001 C CNN
-F 3 "" H 4800 3300 60  0001 C CNN
-	1    4800 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CRYSTAL X1
-U 1 1 513BACD6
-P 7400 3450
-F 0 "X1" H 7400 3600 60  0000 C CNN
-F 1 "CRYSTAL" H 7400 3300 60  0000 C CNN
-F 2 "~" H 7400 3450 60  0000 C CNN
-F 3 "~" H 7400 3450 60  0000 C CNN
-	1    7400 3450
-	-1   0    0    1   
-$EndComp
-$Comp
-L C C1
-U 1 1 513BAD01
-P 7000 3650
-F 0 "C1" H 7050 3750 50  0000 L CNN
-F 1 "22pF" H 7050 3550 50  0000 L CNN
-F 2 "" H 7000 3650 60  0001 C CNN
-F 3 "" H 7000 3650 60  0001 C CNN
-	1    7000 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C2
-U 1 1 513BAD11
-P 7800 3650
-F 0 "C2" H 7850 3750 50  0000 L CNN
-F 1 "22pF" H 7850 3550 50  0000 L CNN
-F 2 "" H 7800 3650 60  0001 C CNN
-F 3 "" H 7800 3650 60  0001 C CNN
-	1    7800 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 513BAD17
-P 7000 3950
-F 0 "#PWR02" H 7000 3950 30  0001 C CNN
-F 1 "GND" H 7000 3880 30  0001 C CNN
-F 2 "" H 7000 3950 60  0001 C CNN
-F 3 "" H 7000 3950 60  0001 C CNN
-	1    7000 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR03
-U 1 1 513BAD27
-P 7800 3950
-F 0 "#PWR03" H 7800 3950 30  0001 C CNN
-F 1 "GND" H 7800 3880 30  0001 C CNN
-F 2 "" H 7800 3950 60  0001 C CNN
-F 3 "" H 7800 3950 60  0001 C CNN
-	1    7800 3950
-	1    0    0    -1  
-$EndComp
 Text GLabel 2950 2850 0    60   Input ~ 0
 USB_DM
 $Comp
@@ -305,9 +216,9 @@ Text GLabel 5400 4250 3    60   Input ~ 0
 13
 Text GLabel 5550 4250 3    60   Input ~ 0
 14
-Text GLabel 6650 3550 2    60   Input ~ 0
+Text GLabel 6650 3450 2    60   Input ~ 0
 17
-Text GLabel 6650 3200 2    60   Input ~ 0
+Text GLabel 6650 3300 2    60   Input ~ 0
 18
 Text GLabel 6650 3000 2    60   Input ~ 0
 20
@@ -1008,4 +919,19 @@ Wire Notes Line
 	7600 2000 7000 2000
 Text Notes 7350 1950 0    60   ~ 0
 nopop
+$Comp
+L MKL24Z64VFM4 U1
+U 1 1 512F925B
+P 4800 3300
+F 0 "U1" H 4400 2650 60  0000 C CNN
+F 1 "MKL24Z64VFM4" H 4300 4700 60  0000 C CNN
+F 2 "" H 4800 3300 60  0001 C CNN
+F 3 "" H 4800 3300 60  0001 C CNN
+	1    4800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3300 6550 3300
+Wire Wire Line
+	6550 3450 6650 3450
 $EndSCHEMATC

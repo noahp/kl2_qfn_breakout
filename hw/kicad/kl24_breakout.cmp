@@ -1,18 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 12/30/2013 16:02:18
-
-BeginCmp
-TimeStamp = /513BAD01;
-Reference = C1;
-ValeurCmp = 22pF;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /513BAD11;
-Reference = C2;
-ValeurCmp = 22pF;
-IdModule  = SM0603;
-EndCmp
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 1/6/2014 14:49:52
 
 BeginCmp
 TimeStamp = /525D7B0A;
@@ -271,13 +257,6 @@ TimeStamp = /512F925B;
 Reference = U1;
 ValeurCmp = MKL24Z64VFM4;
 IdModule  = MKL24Z64VFM4;
-EndCmp
-
-BeginCmp
-TimeStamp = /513BACD6;
-Reference = X1;
-ValeurCmp = CRYSTAL;
-IdModule  = XTAL_7A-8-000MAAE-T;
 EndCmp
 
 EndListe
