@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "6 jan 2014"
+Date "7 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -170,7 +170,7 @@ L USB-micro-ab J1
 U 1 1 5135355A
 P 4650 6150
 F 0 "J1" H 4650 5550 60  0000 C CNN
-F 1 "USB-micro-ab" H 4650 6800 60  0000 C CNN
+F 1 "USB-micro-b" H 4650 6800 60  0000 C CNN
 F 2 "" H 4650 6150 60  0001 C CNN
 F 3 "" H 4650 6150 60  0001 C CNN
 	1    4650 6150

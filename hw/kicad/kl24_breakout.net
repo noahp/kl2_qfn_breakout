@@ -1,11 +1,11 @@
 (export (version D)
   (design
     (source "C:/Documents and Settings/npendlet/Desktop/mklz24/kl2_qfn_breakout/hw/kicad/kl24_breakout.sch")
-    (date "1/6/2014 14:49:45")
+    (date "1/7/2014 9:06:56")
     (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref J1)
-      (value USB-micro-ab)
+      (value USB-micro-b)
       (libsource (lib kicadlib) (part USB-micro-ab))
       (sheetpath (names /) (tstamps /))
       (tstamp 5135355A))
