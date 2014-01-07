@@ -39,40 +39,9 @@ http://cache.freescale.com/files/shared/doc/package_info/98ASA00473D.pdf
 
 other parts
 =====
-usb micro ab
+usb micro b
 -----
-http://www.mouser.com/ProductDetail/FCI/10104111-0001LF/?qs=%2fha2pyFadugqlHYsIycssJOmamHIEU%252boUyT1P%2flLLksRMBp7QwL8jg%3d%3d
-
-3.3v lin. reg
------
-http://www.mouser.com/ProductDetail/Texas-Instruments/LP3985IM5-33-NOPB/?qs=sGAEpiMZZMuLLNXTG1MZarQJh%252b9fiMUlqlyti2azQE0%3d
-http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1700T-3302E-TT/?qs=sGAEpiMZZMuLLNXTG1MZamrVyxlXrz12YZP2vnOw5Jk%3d
-
-3.3/5v reg
------
-http://www.mouser.com/ProductDetail/Microchip-Technology/MCP1252-33X50I-MS/?qs=sGAEpiMZZMsUzhEcHltCubsvjTIdlMwG
-
-lipo chrg
------
-http://www.mouser.com/Search/ProductDetail.aspx?R=MCP73831T-2ACI/OTvirtualkey57940000virtualkey579-MCP73831T-2ACIOT
-
-xtal
------
-http://www.digikey.com/product-detail/en/7A-8.000MAAE-T/887-1740-1-ND/3518790  
-old:  
-http://www.digikey.com/product-detail/en/ABLS-8.000MHZ-B4-T/535-10212-1-ND/2184247
-
-inductor
------
-http://www.digikey.com/product-detail/en/LBC3225T4R7MR/587-2431-1-ND/2230297
-
-temp sense microchip app note
------
-http://ww1.microchip.com/downloads/en/AppNotes/21895d.pdf
-
-schottky
------
-http://www.mouser.com/ProductDetail/Bourns/CD0603-B0130L/?qs=sGAEpiMZZMtQ8nqTKtFS%2fAXFgjeuToUU4fmjd35%2f6xk%3d
+http://www.mouser.com/ProductDetail/FCI/10118192-0001LF/?qs=sGAEpiMZZMulM8LPOQ%252byk2%252bTbV8%2f2X5vivRX5xKgOBI%3d
 
 10 pin header
 -----
