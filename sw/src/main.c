@@ -41,6 +41,32 @@ void main_init_io(void)
     GPIOB_PDDR |= (1 << 0);
 }
 
+void main_init_uart(void)
+{
+    // turn on io clocks
+    SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
+    // set alternate function 3 for uart0
+    PORTD_PCR6 = PORT_PCR_MUX(3);   // rx
+    PORTD_PCR7 = PORT_PCR_MUX(3);   // tx
+
+    // turn on uart0 clock
+    SIM_SCGC4 |= SIM_SCGC4_UART0_MASK;
+
+    // disable tx & rx
+    UART0_C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK);
+
+//    // baud rate high 4 bits
+//    UART0_BDH = 0;
+//    // baud rate low 7 bits
+//    UART0_BDL = 0xFF;
+
+    // enable tx & rx
+    UART0_C2 |= UART_C2_TE_MASK | UART_C2_RE_MASK;
+
+    // send a character
+    UART0_D = 0xA5;
+}
+
 void main_led(void)
 {
     static uint32_t blinkTime = 0;
@@ -56,6 +82,8 @@ void main_led(void)
 int main(void) {
     // initialize the necessary
     main_init_io();
+
+    main_init_uart();
 
     while(1){
         // led task
