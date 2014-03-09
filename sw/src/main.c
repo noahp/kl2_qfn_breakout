@@ -50,21 +50,19 @@ void main_init_uart(void)
     PORTD_PCR7 = PORT_PCR_MUX(3);   // tx
 
     // turn on uart0 clock
+    SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1); // select main clock
     SIM_SCGC4 |= SIM_SCGC4_UART0_MASK;
 
     // disable tx & rx
     UART0_C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK);
 
-//    // baud rate high 4 bits
-//    UART0_BDH = 0;
-//    // baud rate low 7 bits
-//    UART0_BDL = 0xFF;
+    // baud rate high 4 bits
+    UART0_BDH = 0;
+    // baud rate low 7 bits
+    UART0_BDL = 0xFF;
 
     // enable tx & rx
     UART0_C2 |= UART_C2_TE_MASK | UART_C2_RE_MASK;
-
-    // send a character
-    UART0_D = 0xA5;
 }
 
 void main_led(void)
@@ -76,6 +74,10 @@ void main_led(void)
         blinkTime = systick_getMs();
         // toggle
         GPIOB_PTOR = (1 << 0);
+
+        // send a character, once tx data empty bit is set
+        while((UART0_S1 & UART0_S1_TDRE_MASK) == 0);
+        UART0_D = 0xA5;
     }
 }
 
