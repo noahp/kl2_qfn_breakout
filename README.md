@@ -41,7 +41,8 @@ other parts
 =====
 usb micro b
 -----
-http://www.mouser.com/ProductDetail/FCI/10118192-0001LF/?qs=sGAEpiMZZMulM8LPOQ%252byk2%252bTbV8%2f2X5vivRX5xKgOBI%3d
+[ebay micro b w/ mechanical](http://www.ebay.com/itm/50Pcs-Micro-USB-Type-B-Female-Socket-4-Vertical-Legs-fixed-Solder-Connectors-/171315639526?hash=item27e33534e6)  
+[mouser micro b smt only](http://www.mouser.com/ProductDetail/FCI/10118192-0001LF/?qs=sGAEpiMZZMulM8LPOQ%252byk2%252bTbV8%2f2X5vivRX5xKgOBI%3d)
 
 10 pin header
 -----
